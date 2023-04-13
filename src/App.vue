@@ -1,12 +1,12 @@
 <script>
 import HeaderOui from './components/Header.vue'
-import PortfolioOui from "./components/Portfolio.vue"
+import PortfolioItems from './components/Portfolio.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderOui,
-    PortfolioOui,
+    PortfolioItems,
   }
 }
 </script>
@@ -32,8 +32,7 @@ export default {
       <li>Canal+</li>
     </ul>
   </section>
-
-  <PortfolioOui />
+  <PortfolioItems />
   
 </template>
 
