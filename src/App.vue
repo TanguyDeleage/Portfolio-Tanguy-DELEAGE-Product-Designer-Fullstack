@@ -1,5 +1,4 @@
 <script>
-// import HeaderOui from './components/Header.vue'
 import HomeSection from './components/Home.vue'
 import PortfolioItems from './components/Portfolio.vue'
 import AboutSection from './components/About.vue'
@@ -8,7 +7,6 @@ import ContactSection from './components/Contact.vue'
 export default {
   name: 'App',
   components: {
-    // HeaderOui,
     HomeSection,
     PortfolioItems,
     AboutSection,
