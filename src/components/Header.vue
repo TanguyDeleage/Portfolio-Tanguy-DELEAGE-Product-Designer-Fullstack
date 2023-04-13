@@ -10,9 +10,9 @@
 
         <nav class="navbar">
           <ul class="nav-links">
-            <li> <a href="/">Home</a> </li>
-            <li> <a href="about.html">About</a> </li>
-            <li> <a href="contact.html">Contact</a> </li>
+            <button @click="activePage === 'HomeSection'"> Home </button>
+            <button @click="activePage === 'AboutSection'"> About </button>
+            <button @click="activePage === 'ContactSection'"> Contact </button>
           </ul>
         </nav>
 
