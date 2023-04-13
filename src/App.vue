@@ -1,3 +1,16 @@
+<script>
+import HeaderOui from './components/Header.vue'
+import PortfolioOui from "./components/Portfolio.vue"
+
+export default {
+  name: 'App',
+  components: {
+    HeaderOui,
+    PortfolioOui,
+  }
+}
+</script>
+
 <template>
   <HeaderOui />
 
@@ -23,19 +36,6 @@
   <PortfolioOui />
   
 </template>
-
-<script>
-import HeaderOui from './components/Header.vue'
-import PortfolioOui from "./components/Portfolio.vue"
-
-export default {
-  name: 'App',
-  components: {
-    HeaderOui,
-    PortfolioOui,
-  }
-}
-</script>
 
 <style>
 #app {

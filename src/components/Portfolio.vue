@@ -1,6 +1,6 @@
-<template >
+<template>
    <div v-for="project in projects" :key="project">
-        <img src={{ project.image }} alt="">
+    <img src={{ project.image }} alt="">
    </div>
    <div v-for="project in projects" :key="project">
     {{ project.rank }}
