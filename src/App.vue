@@ -1,15 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderOui />
+
+  <section>
+    <h2>Tanguy DELEAGE</h2>
+    <h1>Product Designer Fullstack</h1>
+    <p>I’m a junior designer with a business background and tech skills. I design products by acknowledging business needs, designing experience and assisting devs to integrate it.</p>
+    <div>
+      <button>View Portfolio</button>
+      <button>Contact</button>
+    </div>
+  </section>
+
+  <section>
+    <ul>
+      <li>Le Wagon</li>
+      <li>Orange</li>
+      <li>Accenture</li>
+      <li>Canal+</li>
+    </ul>
+  </section>
+
+  <PortfolioOui />
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderOui from './components/Header.vue'
+import PortfolioOui from "./components/Portfolio.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderOui,
+    PortfolioOui,
   }
 }
 </script>
