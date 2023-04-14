@@ -23,12 +23,10 @@ export default {
 <template>
    <header>
       <div class="header">
-        <div class="brand">
-          <a href="/">
-            <img id="logo" src="https://www.tanguydeleage.com/assets/img/logo.svg" alt="Logo Tanguy DELEAGE" width="35.59" height="40">
-            <h1>Tanguy Deléage</h1>
-          </a>
-        </div>
+        <a class="brand" href="/">
+          <img id="logo" src="https://www.tanguydeleage.com/assets/img/logo.svg" alt="Logo Tanguy DELEAGE" width="35.59" height="40">
+          <h1 class="brand-name">Tanguy Deléage</h1>
+        </a>
 
         <nav class="navbar">
           <ul class="nav-links">
@@ -53,6 +51,8 @@ export default {
   <AboutSection v-if="activePage === 'AboutSection'" />
 
   <ContactSection v-if="activePage === 'ContactSection'" />
+
+  <!-- <component :is="activePage"/> -->
   
 </template>
 
@@ -65,4 +65,35 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border-bottom: 0.1rem black solid;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.burger {
+  display: none;
+}
+
 </style>

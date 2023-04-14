@@ -17,6 +17,7 @@
     <div v-for="(project, index) in projects" :key="project">
         <button>{{ index +1}}</button>
     </div>
+    
 </template>
    
    <script>
