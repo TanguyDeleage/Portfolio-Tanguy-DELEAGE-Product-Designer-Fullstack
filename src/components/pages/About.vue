@@ -1,26 +1,35 @@
 <template>
    <section>
-        <div>
-          <h1>An Atypical Product Designer</h1>
-          <div v-for="paragraph in paragraphs" :key="paragraph">
-            <h3>{{ paragraph.title }}</h3>
-            <p>{{ paragraph.content }}</p>
-          </div>
-        </div>
 
-        <div>
+      <div class="about container">
+        <div class="about-picture">
           <img src="https://www.tanguydeleage.com/assets/img/hero-picture.jpeg" alt="">
         </div>
-
-        <div>
-          <img src="" alt="Frise">
+        <div class="about-data">
+          <h1>An Atypical Product Designer</h1>
+          <div class="about-content">
+            <div class="content-block" v-for="paragraph in paragraphs" :key="paragraph">
+              <h3>{{ paragraph.title }}</h3>
+              <p>{{ paragraph.content }}</p>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="timeline background">
+        <img src="../../assets/images/frise.svg" alt="Timeline">
+      </div>
     </section>
 
-    <div>
-      <h2>Have a project in mind ?</h2>
-      <h3>Let’s discuss it together !</h3>
-      <button>Contact</button>
+    <div class="contact-subsection">
+      <div class="contact-content">
+        <h2 class="light-text">Have a project in mind ?</h2>
+        <h3 class="dark-text">Let’s discuss it together !</h3>
+      </div>
+
+      <div class="btn-primary">
+        Contact
+      </div>
     </div>
 </template>
    
@@ -49,10 +58,63 @@
    </script>
    
    <!-- Add "scoped" attribute to limit CSS to this component only -->
-   <style scoped>
-   ul {
-     list-style-type: none;
-     padding: 0;
-   }
-   </style>
+<style scoped>
+  .about{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    min-height: calc(88vh - 5rem);
+  }
+
+  .about-data {
+    text-align: left;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-picture {
+    width: 50vw;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .light-text {
+    color: var(--black80);
+    font-weight: var(--regular)
+  }
+  .dark-text {
+    font-size: 3.5rem
+  }
+
+  .timeline {
+    padding: 2rem 4rem;
+  }
+</style>
    

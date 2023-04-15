@@ -32,7 +32,7 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 .header {
   display: flex;
@@ -41,6 +41,7 @@ export default {
   justify-content: space-between;
   padding: 2rem 4rem;
   border-bottom: 0.1rem black solid;
+  height: 5rem;
 }
 
 .header a {
@@ -59,9 +60,9 @@ export default {
 }
 
 .nav-link {
-  color: black;
+  color: var(--black100);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: var(--semi-bold);
 }
 
 .brand {
@@ -74,7 +75,7 @@ export default {
 
 .brand-name {
   font-size: 1.3rem;
-  color: black;
+  color: var(--black100);
 }
 
 .burger {
