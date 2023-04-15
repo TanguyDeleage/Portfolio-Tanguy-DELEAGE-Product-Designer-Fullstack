@@ -1,99 +1,46 @@
 <script>
-import HomeSection from './components/Home.vue'
-import PortfolioItems from './components/Portfolio.vue'
-import AboutSection from './components/About.vue'
-import ContactSection from './components/Contact.vue'
-
+import headerItem from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    HomeSection,
-    PortfolioItems,
-    AboutSection,
-    ContactSection,
-  },
-  data() {
-    return {
-      activePage: 'HomeSection'
-    }
-  },
+    headerItem,
+  }
 }
 </script>
 
+
 <template>
-   <header>
-      <div class="header">
-        <a class="brand" href="/">
-          <img id="logo" src="https://www.tanguydeleage.com/assets/img/logo.svg" alt="Logo Tanguy DELEAGE" width="35.59" height="40">
-          <h1 class="brand-name">Tanguy Deléage</h1>
-        </a>
-
-        <nav class="navbar">
-          <ul class="nav-links">
-            <button @click="activePage = 'HomeSection'"> Home </button>
-            <button @click="activePage = 'AboutSection'"> About </button>
-            <button @click="activePage = 'ContactSection'"> Contact </button>
-          </ul>
-        </nav>
-
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </div>
-    </header>
-
-  <HomeSection v-if="activePage === 'HomeSection' "/>
-
-  <PortfolioItems v-if="activePage === 'HomeSection' " />
-
-  <AboutSection v-if="activePage === 'AboutSection'" />
-
-  <ContactSection v-if="activePage === 'ContactSection'" />
-
-  <!-- <component :is="activePage"/> -->
-  
+   <headerItem />
 </template>
 
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 2rem;
-  border-bottom: 0.1rem black solid;
-}
-
-.header a {
-  text-decoration: none;
-}
-
-.brand {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.brand-name {
-  font-size: 1.3rem;
-  color: black;
-}
-
-.burger {
-  display: none;
-}
-
 </style>
