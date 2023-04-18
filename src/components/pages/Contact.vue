@@ -18,11 +18,12 @@
             </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
             <div v-for="(input, index) in inputs" :key="input" class="form-input">
                 <label :for="input.label">{{ input.label }}</label>
-                <input v-if="index === 2" class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label">
-                <input v-else type="text" :placeholder= "input.placeholder" :name="input.label">
+                <input v-if="index != 2" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form">
+                <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form"></textarea>
+                
             </div>
 
             <a href="" class="btn-primary">Submit</a>
@@ -121,15 +122,19 @@ export default {
     border-radius: 0.5rem;
     width: 80%;
     padding: 1.5rem 1rem;
+    font-family: 'lato';
 }
 
 .big-input {
     height: 12rem;
-    line-height: 10px;
-}
-
-.big-input::placeholder {
-    transform: translateY(-4.5rem);
+    background-color: var(--secondary);
+    border: #CACACA 1px solid;
+    box-shadow: 4px 4px 19px 1px #E3E3E3;
+    border-radius: 0.5rem;
+    width: 80%;
+    padding: 1.5rem 1rem;
+    resize: none;
+    font-family: 'lato';
 }
 
 .contact-form label {

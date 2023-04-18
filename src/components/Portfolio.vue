@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         
-                        <a class="btn-primary" :href=" project.url ">Learn more</a>
+                        <router-link class="btn-primary" :href=" project.url" to="/matematch">Learn more</router-link>
                     </div>
                 </div>
             </div>

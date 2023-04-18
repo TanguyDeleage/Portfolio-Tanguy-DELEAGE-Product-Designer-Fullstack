@@ -43,6 +43,7 @@ img {
   text-align: center;
   color: var(--black100);
 }
+
 .btn-primary {
     background-color: var(--primary);
     width: 14rem;
