@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         
-                        <a class="btn-primary" href="{{ project.url }}">Learn more</a>
+                        <a class="btn-primary" :href=" project.url ">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ export default {
                         info: "on the product pitch",
                         },
                     ],
-                    url: "des trucs",
+                    url: "/matematch",
                     image: require('../assets/images/projects/matematch/mockup.png')
                 },
 
@@ -95,7 +95,7 @@ export default {
                         info: "on the product pitch",
                         },
                     ],
-                    url: "des trucs",
+                    url: "/legid",
                     image: "https://www.tanguydeleage.com/assets/img/projects/coop/coop-mockup.png"
                 },
             ]

@@ -57,7 +57,7 @@ img {
   }
 
   .btn-secondary {
-    border: 5px solid black;
+    border: 3px solid black;
     background-color: white;
     width: 14rem;
     height: 4rem;
@@ -65,6 +65,10 @@ img {
     font-weight: 900;
     font-family: Lato, Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black100);
   }
 
   .container {
@@ -91,7 +95,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: var(--semi-bold);
 }
 

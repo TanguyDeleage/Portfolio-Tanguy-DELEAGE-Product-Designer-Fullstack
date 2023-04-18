@@ -12,7 +12,7 @@
           
           <div class="cta">
             <a class="btn-primary" href="">View Portfolio</a>
-            <button class="btn-secondary">Contact</button>
+            <a class="btn-secondary" href="/contact">Contact</a>
           </div>
             
         </div>
@@ -58,15 +58,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: calc(100vh - 13rem);
+    height: calc(100vh - 11rem);
+    padding: 2rem 4rem;
+    justify-content: space-between;
   }
 
   .hero-data {
     display: flex;
     flex-direction: column;
     text-align: left;
-    justify-content: space-between;
-    height: 100%
+    justify-content: center;
+    gap: 5rem;
+    height: 100%;
+    width: 50vw;;
   }
 
   .hero-text {
@@ -94,7 +98,6 @@
 
   .hero-picture {
     filter: grayscale(1);
-    width: 60rem;
     height: 100%
   }
 
@@ -108,7 +111,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 8rem
+    height: 6rem
   }
 
   .logo-container li img{

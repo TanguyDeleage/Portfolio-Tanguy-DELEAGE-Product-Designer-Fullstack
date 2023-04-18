@@ -48,14 +48,10 @@ export default {
   text-decoration: none;
 }
 
-.navbar {
- width: 20vw;
-}
-
 .nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 3rem;
   align-items: center;
 }
 
