@@ -72,6 +72,12 @@ img {
     color: var(--black100);
   }
 
+  .btn-tertiary {
+    color: var(--black100);
+    text-decoration: underline;
+    font-weight: var(--semi-bold);
+  }
+
   .container {
     padding: 0 4rem
   }

@@ -29,7 +29,8 @@
                             </div>
                         </div>
                         
-                        <router-link class="btn-primary" :href=" project.url" to="/matematch">Learn more</router-link>
+                        <!-- <router-link class="btn-primary" :href=" project.url" to="/matematch">Learn more</router-link> -->
+                        <a :href=" project.url" class="btn-primary"> Learn more</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@ export default {
                         },
                     ],
                     url: "/matematch",
-                    image: require('../assets/images/projects/matematch/mockup.png')
+                    image: require('../assets/images/projects/matematch/cover.png')
                 },
 
                 {
