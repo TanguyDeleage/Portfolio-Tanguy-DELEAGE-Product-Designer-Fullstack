@@ -1,5 +1,5 @@
 <template>
-    <section class="projects-section">
+    <div class="projects-section">
         <div class="projects-slider">
             <div class="project-card background" v-for="(project, index) in projects" :key="project">
                 <div class="left-card ">
@@ -38,10 +38,12 @@
 
         <div class="projects-nav">
             <div v-for="(project, index) in projects" :key="project">
-                <a class="project-nav-link" href="">0{{ index +1}}</a>
+                <div class="pointer" v-bind:class="activeProject === index? 'active-project': 'inactive-project'" @click="activeProject = index, scrollProject(activeProject)">
+                    0{{ index +1}}
+                </div>
             </div> 
         </div>
-    </section>
+    </div>
 </template>
    
 <script>
@@ -49,6 +51,7 @@ export default {
     name: 'PortfolioItems',
     data() {
         return {
+            activeProject: 0,
             projects: [
                 {
                     title: "MATEMATCH",
@@ -101,6 +104,25 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        scrollProject(index) {
+            const slider =  document.querySelector('.projects-slider');
+            var windowWidth = window.innerWidth
+            var target = index * windowWidth;
+
+            slider.scrollTo(target, 0);
+        },
+
+        // activateProject(index) {
+            // ('.projects-slider').scrollWidth   => total scrollable
+            // somme des index => nombre de projet
+            // total scrollable / nrb de projet => largeur d'un projet
+
+            // for X project
+            //      if ('.projects-slider') scroll left <= X*largeur d'un projet
+            //      active project = X
+        // }
     }
 }
 </script>
@@ -116,21 +138,38 @@ export default {
     align-items: center;
 }
 
-.project-nav-link {
+.active-project {
     font-size: 2rem;
     font-weight: var(--semi-bold);
     color: var(--black100);
 }
+
+.inactive-project{
+    font-size: 2rem;
+    font-weight: var(--semi-bold);
+    color: var(--black50);
+}
+
 .projects-slider{
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
+    overflow-y: hidden;
     height: calc(100vh - 4rem);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.projects-slider::-webkit-scrollbar {
+    height: 0;
+    width: 0;
 }
 .project-card{
     display: flex;
     flex-direction: row;
     height: calc(100vh - 4rem);
+    scroll-snap-align: start;
+    width: 100%;
 }
 
 .right-card{
@@ -204,5 +243,17 @@ export default {
 .project-image img{
     height: 100%;
     object-fit: contain;
+}
+
+.background:nth-child(even) {
+    background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../src/assets/images/background.jpg)
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.inactive-project:hover {
+    color: var(--black30);
 }
 </style>

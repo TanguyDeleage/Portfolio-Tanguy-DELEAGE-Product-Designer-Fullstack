@@ -48,7 +48,6 @@ img {
     background-color: var(--primary);
     width: 14rem;
     height: 4rem;
-    border-radius: 60px;
     font-weight: var(--bold);
     font-size: 1.1rem;
     display: flex;
@@ -57,12 +56,16 @@ img {
     color: var(--black100);
   }
 
+  .btn-primary:hover, .btn-secondary:hover {
+    box-shadow: 0.5rem 0.5rem var(--black100);
+    transition: 0.2s ease-out ;
+  }
+
   .btn-secondary {
     border: 3px solid black;
     background-color: white;
     width: 14rem;
     height: 4rem;
-    border-radius: 60px;
     font-weight: 900;
     font-family: Lato, Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
@@ -78,15 +81,18 @@ img {
     font-weight: var(--semi-bold);
   }
 
+  .btn-tertiary:hover, .brand-name:hover{
+    color: var(--black50);
+    transition: 0.2s ease-out ;
+  }
+
   .container {
     padding: 0 4rem
   }
 
   .background {
-    /* background-image: url(../../assets/images/background.jpg); */
     background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.jpg);
   }
-
 
 
 /* =========================   Headers ========================= */

@@ -59,6 +59,7 @@ export default {
   color: var(--black100);
   font-size: 1.3rem;
   font-weight: var(--semi-bold);
+  position: relative;
 }
 
 .brand {
@@ -77,5 +78,20 @@ export default {
 .burger {
   display: none;
 }
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: var(--black100);
+    height: 1.5px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+} 
 
 </style>

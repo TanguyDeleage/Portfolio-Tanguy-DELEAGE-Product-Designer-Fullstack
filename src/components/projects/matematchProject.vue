@@ -39,7 +39,7 @@
             </div>
 
             <div class="cta">
-               <a href="" class="btn-primary">Try it yourself</a>
+               <a href="" class="btn-primary">Try prototype</a>
                <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary">Product pitch</a>
             </div>
             
