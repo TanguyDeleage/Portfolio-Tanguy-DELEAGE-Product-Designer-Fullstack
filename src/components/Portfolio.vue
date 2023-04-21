@@ -84,23 +84,23 @@ export default {
                     description: "Built through Le Wagon Bootcamp (leader in tech bootcamp) with 2 other people. Matematch is a Web App helping foreign students to meet locals and discover local culture.",
                     kpi: [
                         {
-                        number: "9",
-                        data: "weeks",
-                        info: "to learn coding",
+                        number: "44",
+                        data: "Hours",
+                        info: "of work",
                         },
                         {
-                        number: "10",
-                        data: "Days",
-                        info: "to create an app",
+                        number: "8",
+                        data: "Teams",
+                        info: "competing",
                         },
                         {
-                        number: "+1100",
-                        data: "View",
-                        info: "on the product pitch",
+                        number: "1st",
+                        data: "Place",
+                        info: "winning team",
                         },
                     ],
                     url: "/legid",
-                    image: "https://www.tanguydeleage.com/assets/img/projects/coop/coop-mockup.png"
+                    image: require('../assets/images/projects/legid/cover.png')
                 },
             ]
         }
@@ -227,7 +227,7 @@ export default {
     font-weight: var(--bold);
 }
 .kpi-info {
-    color: var(--black50);
+    color: var(--black80);
     font-weight: var(--medium);
 }
 

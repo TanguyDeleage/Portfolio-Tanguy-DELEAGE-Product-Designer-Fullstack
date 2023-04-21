@@ -8,7 +8,7 @@ export default {
    <header>
       <div class="header">
         <a class="brand" href="/">
-          <img id="logo" src="https://www.tanguydeleage.com/assets/img/logo.svg" alt="Logo Tanguy DELEAGE" width="35.59" height="40">
+          <img id="logo" src="../assets/logo.svg" alt="Logo Tanguy DELEAGE" width="35.59" height="40">
           <h1 class="brand-name">Tanguy Deléage</h1>
         </a>
 

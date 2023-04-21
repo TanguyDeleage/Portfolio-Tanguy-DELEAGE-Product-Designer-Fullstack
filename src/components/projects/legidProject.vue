@@ -2,7 +2,7 @@
     <div class="project">
        <section class="hero-project">
           <div class="left-card">
-             <img :src="project.image" alt="matematch app mockup">
+             <img :src="project.image" alt="Legid app mockup">
           </div>
  
           <div class="right-card background">
@@ -40,7 +40,6 @@
  
              <div class="cta">
                 <a href="" class="btn-primary">Try prototype</a>
-                <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary">Product pitch</a>
              </div>
              
           </div>
@@ -86,6 +85,9 @@
        <section class="project-section">
           <h2 class="section-title">{{ research.title }}</h2>
           <div class="flex-section">
+            <div>
+                <img :src="research.image" alt="">
+             </div>
              <div class="section-text">
                 <div class="section-paragraph">
                    <h3>{{ research.h1 }}</h3>
@@ -95,9 +97,6 @@
                    <h3 >{{ research.h2 }}</h3>
                    <p>{{ research.p2 }}</p>
                 </div>
-             </div>
-             <div>
-                <img :src="research.image" alt="">
              </div>
           </div>
        </section>
@@ -173,8 +172,6 @@
           <div class="prototype-section">
              <div class="flex-section background prototype">
                 <img :src="prototype.image" alt="">
-                <img :src="prototype.image1" alt="">
-                <img :src="prototype.image2" alt="">
              </div>
           </div>
        </section>
@@ -182,22 +179,31 @@
        <section class="project-section">
           <h2 class="section-title">{{ pitch.title }}</h2>
           <div class="flex-section">
+            <div>
+                <img :src="pitch.image" alt="">
+             </div>
              <div class="section-text">
                 <div class="section-paragraph">
                    <h3> {{ pitch.h1 }}</h3>
                    <p>{{ pitch.p1 }}</p>
-                   <a href=""></a>
                 </div>
-             </div>
-             <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1AYKmFTObQQ?start=2435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
              </div>
           </div>
        </section>
- 
-       <section class="project-section conclusion">
+
+       <section class="project-section">
           <h2 class="section-title">{{ conclusion.title }}</h2>
-          <p>{{ conclusion.p1 }}</p>
+          <div class="flex-section">
+             <div class="section-text">
+                <div class="section-paragraph">
+                   <h3> {{ conclusion.h1 }}</h3>
+                   <p>{{ conclusion.p1 }}</p>
+                </div>
+             </div>
+             <div>
+                <img :src="conclusion.image" alt="">
+             </div>
+          </div>
        </section>
  
     </div>
@@ -205,11 +211,11 @@
  
  <script>
  export default {
-    name: 'matematchProject',
+    name: 'legidProject',
       data() {
        return {
           project: {
-             image: require("../../assets/images/projects/matematch/cover.png"),
+            image: require("../../assets/images/projects/legid/cover.png"),
              title: "LEGID",
              category: "Ideation & Design",
              context: "During a startup weekend (creating a startup in 48h), in a group of 5 people we had 48 hours to find a problematic, test it with real users, evaluate the business viability, build a roadmap and pitch the project in front of a jury.",
@@ -220,37 +226,37 @@
  
           challenge: {
              title: "CHALLENGE",
-             image: require("../../assets/images/projects/matematch/team.jpg"),
+             image: require("../../assets/images/projects/legid/challenge.jpg"),
              h1: "Create the best promising and viable startup project",
-             p1: "8 groups compete 18h a day (even during dinner) to bring the best startup project.",
-             h2: "Helping relatives of a deceased person to manage the deceased's digital patrimony",
-             p2: "X",
+             p1: "8 groups, working from 8am to 1am to design the best start-up project. The aim is to solution a real problem, with an economically viable test it, and present it in front of a jury of 5 entrepreneurs or incubator directors.",
+             h2: "Helping family with deceased data management and digital patrimony",
+             p2: "Did you know that in 2070 on Facebook, there will be more dead users than alive. Indeed, the network is getting older and nobody deletes his account before dying. Unfortunately, this is not the only platform, since we are digital, we have multiplied the creation of accounts but have never considered their deletion. This data can make it harder for families to grieve, but it also contributes to data center CO2 emissions. We need to find a solution.",
           },
  
           process: {
              title: "PROCESS",
-             image: require("../../assets/images/projects/matematch/process.svg"),
+             image: require("../../assets/images/projects/legid/process.svg"),
              h1: "Design Thinking : Full scope",
-             p1: "X",
-             botImage: require("../../assets/images/projects/matematch/timeline.svg"),
+             p1: "We only have a week end to work, so obviously we won’t achieve a fine tuned enterprise. However we will confirm the existence of a problem, explore it, imagine solution and test their potential. In terms of the design thinking approach, this will cover the whole scope from problem to solution. Even if each part will be cover quickly.",
+             botImage: require("../../assets/images/projects/legid/timeline.svg"),
           },
  
           research: {
              title: "RESEARCH",
-             image: require("../../assets/images/projects/matematch/friends.jpg"),
-             h1: "Brainstorming",
-             p1: "First thing first, we must find a problem to tackle. We will share freely our ideas and write them on a big whiteboard. The aim here is to not judge and just bring ideas. This task would last from 10pm to 1am on the friday.",
-             h2: "Convincing the team",
-             p2: "On the saturday morning, we were late, we should had choose  already what problematic we wanted to work on. Either our problematics were to common (food delivery, clothes recycling...) or teammate were not ready to work on it because of the subject : the funeral industry.",
+             image: require("../../assets/images/projects/legid/research.jpg"),
+             h1: "Ideation",
+             p1: "Friday, 10pm, we start with an empty whiteboard, we have until 1am to fill it and come up with a solution. We start our ideation workshop with a Crazy 8, an exercise where each member has 8 minutes to find 8 ideas. This allows us to build quantity over quality. However it helps everyone speaks freely and may helps create connections between ideas. At the end of the exercise the whiteboard is filled and we must organise our ideas. When we leave the place at 1am, 3 ideas are left on the board, we should have selected our problem by that time.",
+             h2: "Brainstormig",
+             p2: "When we arrived at 8 in the morning, we knew we had to choose quickly what problematic we wanted to work on. Our choices were about sustainable clothes, recycling glasses, or deceased data management. Deep inside me i wanted to work on the last one but everyone else was embarrassed to tackle such a problematic. I proposed a brainstorming workshop where I’d be the facilitator, not involved in the decision. It took time but at the end of the workshop everyone was ready to work one the deceased data management.",
           },
 
           interview: {
              title: "INTERVIEWS",
-             image: require("../../assets/images/projects/matematch/friends.jpg"),
-             h1: "Phone calls & Chat",
-             p1: "X",
-             h2: "Problem validation",
-             p2: "X",
+             image: require("../../assets/images/projects/legid/interview.jpg"),
+             h1: "Notaries & Legal frame",
+             p1: "It is already Saturday afternoon, and we have to verify that our problem is real and that bringing a solution to it makes sense. After many researches on the internet, we chose to call notaries to inform us about the legal framework and its limits. We learn that the subject is not covered in France, it is a “grey zone”, but the interest is growing. ",
+             h2: "Relatives of deceased persons",
+             p2: "By chatting with people, we discovered that families don’t know how to deal with their relatives digital assets and would generally prefer to erase the data especially when they acknowledge the environmental impact.",
           },
  
           problems: {
@@ -273,11 +279,11 @@
 
           solution: {
              title: "SOLUTION / PROBLEM FIT",
-             image: require("../../assets/images/projects/matematch/friends.jpg"),
+             image: require("../../assets/images/projects/legid/solution.jpg"),
              h1: "MVP Approach",
-             p1: "X",
+             p1: "In the second part of the afternoon, following our exchanges we have to imagine our solution to allow the 'transmission of our digital heritage'. At first, thanks to a new brainstorming we evoke the possibility of a platform of sharing passwords with the wishes of the deceased person. We could thus choose to delete our Facebook account but keep our Instagram photos. In view of the security constraints that this poses we chose to focus on the core of our topic. We therefore first thought about a solution to allow families to easily request the deletion of their loved ones' accounts.",
              h2: "Test and learn",
-             p2: "X",
+             p2: "To verify the interest of our solution, we contacted funeral homes. Through these exchanges they told us that according to them this service could interest the families and they would even be ready to put forward this service in their prestations.",
           },
  
           conception: {
@@ -296,26 +302,27 @@
                 {
                    subtitle: "Landing Page",
                    description: "X",
-                   image: require("../../assets/images/projects/matematch/branding.svg"),
+                   image: require("../../assets/images/projects/legid/cover.png"),
                 },
              ]
           },
  
           prototype: {
              title: "Presentation Deck",
-             image: require("../../assets/images/projects/matematch/flow1.png"),
+             image: require("../../assets/images/projects/legid/slides.gif"),
           },
  
           pitch: {
              title: "PITCH",
-             // image: require("https://www.youtube.com/embed/1AYKmFTObQQ?start=2435"),
+             image: require("../../assets/images/projects/legid/pitch.jpg"),
              h1: "5min to convince 5 person",
-             p1: "X",
+             p1: "Being the initiator of LegID, I pitched the project alone in front of a jury of 5 people, entrepreneurs, but also directors of incubators. During this 5-minute pitch, I had to present all the steps of our project, from the research of the problem, to our financial projections and our milestones.",
           },
  
           conclusion: {
              title: "CONCLUSION",
-             p1: "X",
+             image: require("../../assets/images/projects/legid/conclusion.jpg"),
+             p1: "The jury selected us as the winner, so we won a nice trophy but also the possibility to be incubated in the Centrale-Audencia incubator. After working long hours on a project like this one, we realized how important it is to build a team in a project. In our case, we are all students at different ages and working on a project for a weekend together is quite different from working on it for years. So we preferred to decline the offer so that everyone could work on other projects.",
           },
        }
       }
@@ -500,9 +507,10 @@
     }
  
     .prototype img {
-       width: 30%;
+       width: 100%;
        height: 100%;
        object-fit: contain;
+       margin: 0 auto;
     }
  
     .design-sections {

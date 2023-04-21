@@ -8,7 +8,7 @@
                     <!-- Comment arriver à display l'icon ????? -->
                     <div class="social-link"> 
                         <img class="social-icon" :src="require('../../assets/icons/' +  contact.icon)" :alt="'Logo ' + contact.title">
-                        <a :href="contact.link" class="contact-link"> {{ contact.label }} </a>
+                        <a :href="contact.link" class="btn-tertiary"> {{ contact.label }} </a>
                     </div>
                 </div>
             </div>
@@ -102,11 +102,6 @@ export default {
     align-items: center;
 }
 
-.contact-link {
-    color: var(--black100);
-    text-decoration: underline;
-}
-
 .form-input {
     width: 100%;
     display: flex;
@@ -184,7 +179,7 @@ export default {
 
 .contact-description {
     font-weight: var(--medium);
-    color: var(--black50);
+    color: var(--black80);
 }
 
 .contact-footer {

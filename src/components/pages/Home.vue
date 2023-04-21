@@ -7,7 +7,7 @@
               <h2 class="hero-title">TANGUY DELEAGE</h2>
               <h1 class="hero-subtitle">Product Designer Fullstack</h1>
             </div>
-            <p>I’m a junior designer with a business background and tech skills. I design products by acknowledging business needs, designing experience and assisting devs to integrate it.</p>
+            <p class="hero-description">I’m a junior designer with a business background and tech skills. I design products by acknowledging business needs, designing experience and assisting devs to integrate it.</p>
           </div>
           
           <div class="cta">
@@ -87,6 +87,10 @@
 
   .hero-title {
     color: var(--black80);
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
   }
 
 

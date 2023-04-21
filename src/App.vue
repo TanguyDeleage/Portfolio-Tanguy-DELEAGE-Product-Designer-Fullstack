@@ -81,8 +81,8 @@ img {
     font-weight: var(--semi-bold);
   }
 
-  .btn-tertiary:hover, .brand-name:hover{
-    color: var(--black50);
+  .btn-tertiary:hover, .brand:hover{
+    filter: contrast(0.3);
     transition: 0.2s ease-out ;
   }
 
