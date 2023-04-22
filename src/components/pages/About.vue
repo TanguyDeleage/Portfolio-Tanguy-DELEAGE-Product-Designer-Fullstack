@@ -56,15 +56,55 @@
    }
    </script>
    
-   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* =============== Small devices ================ */
+@media screen and (max-width: 930px) {
+  .about{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .about-picture {
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+
+  .about-data {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .timeline {
+    padding: 2rem 2rem;
+  }
+  .contact-subsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+}
+
+/* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
   .about{
     display: flex;
     flex-direction: row;
     gap: 4rem;
     padding: 2rem 4rem;
   }
-
+  .about-picture {
+    width: 40vw;
+    align-items: center;
+    display: flex;
+  }
   .about-data {
     text-align: left;
     width: 60vw;
@@ -72,12 +112,18 @@
     flex-direction: column;
     gap: 2rem;
   }
-
-  .about-picture {
-    width: 40vw;
-    align-items: center;
-    display: flex;
+  .timeline {
+    padding: 2rem 4rem;
   }
+
+  .contact-subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+  }
+}
 
   .about-content {
     display: flex;
@@ -89,14 +135,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .contact-subsection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 6rem;
   }
 
   .contact-content {
@@ -112,10 +150,6 @@
   }
   .dark-text {
     font-size: 3.5rem
-  }
-
-  .timeline {
-    padding: 2rem 4rem;
   }
 </style>
    

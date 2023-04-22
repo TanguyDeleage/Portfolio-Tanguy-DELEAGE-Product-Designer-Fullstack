@@ -34,25 +34,76 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 4rem;
-  border-bottom: 0.1rem black solid;
-  height: 5rem;
+/* =============== Small devices ================ */
+@media screen and (max-width: 930px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    background-color: var(--secondary);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 9998;
+    padding: 15rem 2rem;
+    transform: translateX(100%);
+    transition: all 0.7s ease-in;
+    gap: 5rem;
+  }
+
+  .nav-links li a{
+    color: var(--black100);
+    font-size: var(--font-h2);
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    border-bottom: 0.1rem black solid;
+    height: 5rem;
+  }
+
+  .brand {
+    z-index: 9999;
+  }
 }
+
+/* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
+  .burger {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    border-bottom: 0.1rem black solid;
+    height: 5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
 
 .header a {
   text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  align-items: center;
 }
 
 .nav-link {
@@ -75,10 +126,6 @@ export default {
   color: var(--black100);
 }
 
-.burger {
-  display: none;
-}
-
 .nav-link:after {
     content: "";
     position: absolute;
@@ -93,5 +140,18 @@ export default {
 .nav-link:hover:after {
     width: 100%;
 } 
+
+.burger {
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.burger div {
+  width: 35px;
+  height: 3px;
+  background-color: var(--black100);
+  margin: 6px;
+  transition: all 0.3s ease;
+}
 
 </style>

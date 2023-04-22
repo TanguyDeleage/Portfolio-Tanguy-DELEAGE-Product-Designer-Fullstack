@@ -47,9 +47,10 @@
    }
    </script>
    
-   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
 
+<style scoped>
+/* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
   .hero {
     height: calc(100vh - 5rem);
   }
@@ -62,7 +63,6 @@
     padding: 2rem 4rem;
     justify-content: space-between;
   }
-
   .hero-data {
     display: flex;
     flex-direction: column;
@@ -72,15 +72,44 @@
     height: 100%;
     width: 50vw;;
   }
+}
+
+@media screen and (max-width: 930px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2rem;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .hero-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .hero-picture{
+    width: 100%;
+  }
+
+  .hero-picture img{
+    width: 100%;
+  }
+}
 
   .hero-text {
-    gap: 40px;
+    gap: 2.5rem;
     display: flex;
     flex-direction: column;
   }
 
   .hero-header {
-    gap: 8px;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
   }

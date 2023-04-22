@@ -80,8 +80,8 @@ export default {
 
                 {
                     title: "LEGID",
-                    subtitle: "10 days to help foreign students live a deeper exchange experience",
-                    description: "Built through Le Wagon Bootcamp (leader in tech bootcamp) with 2 other people. Matematch is a Web App helping foreign students to meet locals and discover local culture.",
+                    subtitle: "48h to help families live an easier mourning",
+                    description: "Built through a start-up weekend with 5 other people. LegID is a service allowing families to manage the data of deceased persons",
                     kpi: [
                         {
                         number: "44",
@@ -127,15 +127,127 @@ export default {
 }
 </script>
    
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
 
-.projects-nav {
-    height: 4rem;
-    gap: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+<style scoped>
+/* =============== Small devices ================ */
+@media screen and (max-width: 930px) {
+    .project-card{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .projects-slider{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+
+    .left-card {
+        display: none;
+    }
+
+    .right-card{
+        width: 100%;
+        height: calc(100%);
+    }
+
+    .project-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 2px black solid;
+        padding: 2rem 4rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    a {
+        margin: 0 auto;
+    }
+
+    .projects-nav {
+        display: none;
+    }
+    .project-number{
+        font-size: 3rem;
+        font-weight: var(--semi-bold);
+    }
+    .project-data {
+        padding: 1rem 2rem;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-kpis {
+        display: none;
+    }
+}
+/* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
+    .project-card{
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 4rem);
+        scroll-snap-align: start;
+        width: 100%;
+    }
+    .projects-slider{
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        height: calc(100vh - 4rem);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .project-subtitle .project-description{
+        text-align: left;
+    }
+
+    .left-card {
+        width: 50vw;
+        height: calc(100%);
+    }
+
+    .right-card{
+        border-left: 2px black solid;
+        width: 50vw;
+        height: calc(100%);
+    }
+
+    .project-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 2px black solid;
+        padding: 2rem 4rem;
+    }
+    .projects-nav {
+        height: 4rem;
+        gap: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-number{
+        font-size: 4rem;
+        font-weight: var(--semi-bold);
+    }
+    .project-data {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .project-kpis {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .active-project {
@@ -150,68 +262,9 @@ export default {
     color: var(--black50);
 }
 
-.projects-slider{
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
-    height: calc(100vh - 4rem);
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
 .projects-slider::-webkit-scrollbar {
     height: 0;
     width: 0;
-}
-.project-card{
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 4rem);
-    scroll-snap-align: start;
-    width: 100%;
-}
-
-.right-card{
-    border-left: 2px black solid;
-    width: 50vw;
-    height: calc(100%);
-}
-
-.left-card {
-    width: 50vw;
-    height: calc(100%);
-}
-.project-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-bottom: 2px black solid;
-    padding: 2rem 4rem;
-}
-
-.project-data {
-    padding: 3rem 4rem;
-    gap: 3rem;
-    display: flex;
-    flex-direction: column;
-}
-.project-number{
-    font-size: 4rem;
-    font-weight: var(--semi-bold);
-}
-.project-subtitle {
-    text-align: left;
-}
-
-.project-description {
-    text-align: left;
-}
-
-.project-kpis {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .kpi-figues {

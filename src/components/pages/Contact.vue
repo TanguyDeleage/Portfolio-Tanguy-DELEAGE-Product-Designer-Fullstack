@@ -75,31 +75,111 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.contact {
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 5rem);
+
+/* =============== Small devices ================ */
+@media screen and (max-width: 930px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .socials {
+        text-align: left;
+        padding: 4rem 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 2rem;
+        gap: 2rem;
+        align-items: center;
+    } 
+
+    .contact-form input {
+        background-color: var(--secondary);
+        border: #CACACA 1px solid;
+        box-shadow: 4px 4px 19px 1px #E3E3E3;
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        font-family: 'lato';
+    }
+    .big-input {
+        height: 12rem;
+        background-color: var(--secondary);
+        border: #CACACA 1px solid;
+        box-shadow: 4px 4px 19px 1px #E3E3E3;
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        resize: none;
+        font-family: 'lato';
+    }
+    .contact-form label {
+        font-weight: var(--semi-bold);
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
 }
 
-.socials {
-    text-align: left;
-    padding: 4rem;
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
+    .contact {
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 5rem);
+    }
 
-.contact-form {
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 4rem;
-    /* justify-content: space-between; */
-    gap: 2rem;
-    align-items: center;
+    .socials {
+        text-align: left;
+        padding: 4rem;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-form {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 4rem;
+        gap: 2rem;
+        align-items: center;
+    } 
+    .contact-form input {
+    background-color: var(--secondary);
+    border: #CACACA 1px solid;
+    box-shadow: 4px 4px 19px 1px #E3E3E3;
+    border-radius: 0.5rem;
+    width: 80%;
+    padding: 1.5rem 1rem;
+    font-family: 'lato';
+}
+    .big-input {
+        height: 12rem;
+        background-color: var(--secondary);
+        border: #CACACA 1px solid;
+        box-shadow: 4px 4px 19px 1px #E3E3E3;
+        border-radius: 0.5rem;
+        width: 80%;
+        padding: 1.5rem 1rem;
+        resize: none;
+        font-family: 'lato';
+    }
+    .contact-form label {
+        font-weight: var(--semi-bold);
+        display: flex;
+        justify-content: flex-start;
+        width: 80%;
+    }
 }
 
 .form-input {
@@ -108,35 +188,6 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-}
-
-.contact-form input {
-    background-color: var(--secondary);
-    border: #CACACA 1px solid;
-    box-shadow: 4px 4px 19px 1px #E3E3E3;
-    border-radius: 0.5rem;
-    width: 80%;
-    padding: 1.5rem 1rem;
-    font-family: 'lato';
-}
-
-.big-input {
-    height: 12rem;
-    background-color: var(--secondary);
-    border: #CACACA 1px solid;
-    box-shadow: 4px 4px 19px 1px #E3E3E3;
-    border-radius: 0.5rem;
-    width: 80%;
-    padding: 1.5rem 1rem;
-    resize: none;
-    font-family: 'lato';
-}
-
-.contact-form label {
-    font-weight: var(--semi-bold);
-    display: flex;
-    justify-content: flex-start;
-    width: 80%;
 }
 
 ::placeholder {

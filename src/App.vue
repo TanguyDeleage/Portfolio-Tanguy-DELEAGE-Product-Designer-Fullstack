@@ -86,10 +86,6 @@ img {
     transition: 0.2s ease-out ;
   }
 
-  .container {
-    padding: 0 4rem
-  }
-
   .background {
     background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.jpg);
   }
@@ -97,20 +93,6 @@ img {
 
 /* =========================   Headers ========================= */
 
-h1{
-  font-size: 3.2rem;
-  font-weight: var(--bold);
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: var(--medium);
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: var(--semi-bold);
-}
 
 /* ==================== Root Variables ======================= */
   :root{
@@ -127,5 +109,48 @@ h3 {
     --medium: 400;
     --regular: 300;
   }
+
+  /* =============== Small devices ================ */
+@media screen and (max-width: 930px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: var(--medium);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: var(--semi-bold);
+  }
+}
+  /* =============== Big devices ================ */
+@media screen and (min-width: 930px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  h1{
+    font-size: 3.2rem;
+    font-weight: var(--bold);
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: var(--medium);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: var(--semi-bold);
+  }
+}
   
 </style>
