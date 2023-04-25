@@ -2,17 +2,16 @@
    <div class="project">
       <section class="hero-project">
          <div class="left-card">
-            <img :src="project.image" alt="matematch app mockup">
+            <img :src="project.image" alt="Legid app mockup" class="cover-project">
+             <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-big" @click="$router.go(-1)" alt="Icon back arrow">
          </div>
 
          <div class="right-card background">
             <div class="right-card-info">
                <div class="header-project">
+                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" @click="$router.go(-1)" alt="">
                   <h1>{{ project.title }}</h1>
-                  <a href="/" class="close-icon">
-                     <div class="line1"></div>
-                     <div class="line2"></div>
-                  </a>
+                  <div class="header-filler"></div>
                </div>
 
                <div class="hero-subtitle">
@@ -39,8 +38,8 @@
             </div>
 
             <div class="cta">
-               <a href="" class="btn-primary">Try prototype</a>
-               <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary">Product pitch</a>
+               <a href="" class="btn-primary" target="_blank">Try prototype</a>
+               <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary" target="_blank">Product pitch</a>
             </div>
             
          </div>
@@ -181,6 +180,26 @@
          <p>{{ conclusion.p1 }}</p>
       </section>
 
+      <section>
+         <div class="project-section container rebond-section background">
+            <div class="up-arrow" @click="goUP()">
+               <img src="../../assets/icons/back-arrow.svg" alt="">
+            </div>
+            <div class="rebond-right">
+               <div class="rebond-picture">
+                  <img :src="rebond.image" alt="">
+               </div>
+               <div class="rebond-data">
+                  <div class="rebond-title">
+                     <h3>{{ rebond.title }}</h3>
+                     <p>{{rebond.subtitle}}</p>
+                  </div>
+                  <a :href="rebond.link" class="btn-primary">Discover next project</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
    </div>
 </template>
 
@@ -211,7 +230,7 @@ export default {
          process: {
             title: "PROCESS",
             image: require("../../assets/images/projects/matematch/process.svg"),
-            h1: "Design Thinking : Solution focused",
+            h1: "Design Thinking: Solution focused",
             p1: "Because of the bootcamp’s limit, we were solution focused to earn time and be able to develop an app in 10 days. However I choose to work on a project I had insights on, so it would compensate the fact we didn’t do a discovery phase.",
             botImage: require("../../assets/images/projects/matematch/timeline.svg"),
          },
@@ -294,8 +313,23 @@ export default {
             title: "CONCLUSION",
             p1: "After this experience with Le Wagon, I developed tons of skills. In development of course. But also in design. I started to give attention to details. I knew I was really passionate by design and a time would come where I would like to work in this field.",
          },
+
+         rebond: {
+            title: "LegID",
+            subtitle: "48h to help families live an easier mourning",
+            link: "/legid",
+            image: require('../../assets/images/projects/legid/cover.png'),
+         },
       }
-     }
+   },
+   methods: {
+        goUP() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+        }
+      }
 }
 </script>
 
@@ -326,6 +360,10 @@ export default {
    }
    .project-section {
       padding: 2rem;
+   }
+
+   .cover-project {
+      max-height: 30rem;
    }
    .flex-section {
       display: flex;
@@ -380,11 +418,58 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      max-height: 30rem;
    }
    .conclusion {
       width: 100%;
       margin: 0 auto;
    }
+
+   iframe {
+      width: 100%;
+   }
+   
+   .header-filler {
+      width: 2rem;
+   }
+
+   .arrow-back-big {
+      display: none;
+   }
+   .rebond-picture {
+      width: 80%;
+      object-fit: contain;
+      margin: 0 auto;
+   }
+
+   .rebond-picture img{
+      max-height: 30rem;
+      object-fit: contain;
+   }
+
+   .rebond-data {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      height: 100%;
+   }
+
+   .rebond-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .rebond-section {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+      justify-content: space-between;
+   }
+
 }
 
 /* =============== Big devices ================ */
@@ -421,6 +506,8 @@ export default {
       gap: 2rem;
       align-items: center;
       max-height: 90vh;
+
+      justify-content: space-between;
    }
    .section-text {
       text-align: left;
@@ -428,6 +515,7 @@ export default {
       flex-direction: column;
       gap: 2rem;
       width: 50vw;
+      padding: 0 4rem;
    }
 
    .project-section img{
@@ -473,10 +561,64 @@ export default {
       width: 50%;
       margin: 0 auto;
    }
+   .arrow-back-big {
+      width: 2rem;
+      height: fit-content;
+      top: 7rem;
+      left: 4rem;
+      position: absolute;
+   } 
+
+   .arrow-back-small {
+      display: none;
+   }
+
+   .header-filler {
+      display: none;
+   }
+
+   
+   .rebond-picture {
+      width: 20rem;
+      height: 100%;
+   }
+
+   .rebond-data {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      height: 100%;
+   }
+
+   .rebond-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .rebond-section {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      max-height: 90vh;
+      justify-content: space-between;
+   }
+
+   .rebond-right {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      max-height: 90vh;
+      max-width: 50%;
+   }
 }
 
 
-   .left-card img {
+   .cover-project {
       height: 100%;
       object-fit: contain;
    }
@@ -496,26 +638,6 @@ export default {
 
    .header-project h1 {
       font-weight: var(--medium);
-   }
-
-   .line1, .line2 {
-      width: 30px;
-      height: 2px;
-      background-color: var(--black100);
-   }
-
-   .line1 {
-      transform: rotate(-45deg) translate(-10px, 6px);
-   }
-
-   .line2 {
-      transform: rotate(45deg) translate(4.5px, 9px);
-   }
-
-   .close-icon {
-      position: relative;
-      width: 1.5rem;
-      height: 1.5rem;
    }
 
    .hero-subtitle h4{
@@ -580,4 +702,26 @@ export default {
       max-width: 100%;
       object-fit: contain;
    }
+   .section-paragraph h3 {
+      font-size: 1.2rem;
+   }
+
+
+   .up-arrow {
+      transform: rotate(90deg);
+      background-color: var(--black30);
+      border-radius: 200rem;
+      padding: 1rem;
+   }
+
+   .up-arrow:hover {
+      opacity: 0.8;
+      cursor: pointer;
+   }
+
+   .up-arrow img {
+      width: 2rem;
+      height: 2rem;
+   }
+
 </style>

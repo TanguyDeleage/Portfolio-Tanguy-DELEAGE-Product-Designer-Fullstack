@@ -54,6 +54,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--black100);
+    cursor: pointer;
   }
 
   .btn-primary:hover, .btn-secondary:hover {
@@ -127,7 +128,7 @@ img {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: var(--semi-bold);
   }
 }
@@ -151,6 +152,10 @@ img {
     font-size: 1.5rem;
     font-weight: var(--semi-bold);
   }
+  
+  .pointer:hover {
+    cursor: pointer;
+}
 }
   
 </style>

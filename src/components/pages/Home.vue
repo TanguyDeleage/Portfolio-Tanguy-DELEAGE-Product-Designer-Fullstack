@@ -11,7 +11,7 @@
           </div>
           
           <div class="cta">
-            <a class="btn-primary" href="">View Portfolio</a>
+            <div class="btn-primary" @click="toPortfolio()" href="">View Portfolio</div>
             <a class="btn-secondary" href="/contact">Contact</a>
           </div>
             
@@ -23,12 +23,14 @@
     </section>
 
     <section>
-        <ul class="logo-container container">
-          <li><img src="../../assets/images/entreprises/le-wagon.png" alt="Logo le wagon"></li>
-          <li><img src="../../assets/images/entreprises/orange.png" style="width: 4rem;" alt="Logo Orange"></li>
-          <li><img src="../../assets/images/entreprises/accenture.png" alt="Logo Accenture"></li>
-          <li><img src="../../assets/images/entreprises/canal.png" alt="Logo Canal+"></li>
-        </ul>
+      <div class="logos-slider">
+        <div class="logo-container container">
+          <img src="../../assets/images/entreprises/le-wagon.png" alt="Logo le wagon">
+          <img src="../../assets/images/entreprises/orange.png" alt="Logo Orange">
+          <img src="../../assets/images/entreprises/accenture.png" alt="Logo Accenture">
+          <img src="../../assets/images/entreprises/canal.png" alt="Logo Canal+">
+        </div>
+      </div>
     </section>
   </div>
 
@@ -41,9 +43,24 @@
    <script>
    import PortfolioItems from '../Portfolio.vue'
    export default {
-     name: 'HomeSection',
-     components: {PortfolioItems,
-    }
+      name: 'HomeSection',
+      components: {PortfolioItems,
+      },
+      methods: {
+        toPortfolio() {
+
+          const hero = document.querySelector('.hero')
+          const header = document.querySelector('.header')
+
+          var target = header.offsetHeight + hero.offsetHeight
+
+          window.scrollTo({
+            top: target,
+            behavior: "smooth"
+            
+          })
+        }
+      }
    }
    </script>
    
@@ -73,7 +90,7 @@
     width: 50vw;;
   }
 }
-
+/* =============== Small devices ================ */
 @media screen and (max-width: 930px) {
   .home {
     display: flex;
@@ -82,6 +99,7 @@
     padding: 2rem 2rem;
     justify-content: space-between;
     gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .hero-data {
@@ -99,6 +117,10 @@
 
   .hero-picture img{
     width: 100%;
+  }
+
+  .logos-slider {
+    display: none;
   }
 }
 
@@ -139,17 +161,37 @@
     object-fit: contain;
   }
 
+  /* @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {transform: translateX(-100%);}
+  } */
+
+  .logos-slider {
+    overflow: hidden;
+    /* white-space: nowrap; */
+    height: 6rem;
+  }
   .logo-container {
+    /* animation: 20s slide infinite linear; */
+    /* display: inline-block; */
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2rem;
     align-items: center;
-    height: 6rem
   }
 
-  .logo-container li img{
-    height: auto;
-    width: 10rem;
+  /* .logos-slider:hover .logo-container {
+    animation-play-state: paused;
+  } */
+
+  .logo-container img {
+    height: 60%;
+    object-fit: contain;
   }
+
   </style>
    

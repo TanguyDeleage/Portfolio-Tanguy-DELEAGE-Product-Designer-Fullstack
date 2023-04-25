@@ -2,17 +2,16 @@
     <div class="project">
        <section class="hero-project">
           <div class="left-card">
-             <img :src="project.image" alt="Legid app mockup">
+             <img :src="project.image" alt="Legid app mockup" class="cover-project">
+             <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-big" @click="$router.go(-1)" alt="Icon back arrow">
           </div>
  
           <div class="right-card background">
              <div class="right-card-info">
                 <div class="header-project">
+                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" @click="$router.go(-1)" alt="">
                    <h1>{{ project.title }}</h1>
-                   <a href="/" class="close-icon">
-                      <div class="line1"></div>
-                      <div class="line2"></div>
-                   </a>
+                   <div class="header-filler"></div>
                 </div>
  
                 <div class="hero-subtitle">
@@ -39,7 +38,7 @@
              </div>
  
              <div class="cta">
-                <a href="" class="btn-primary">Try prototype</a>
+                <a href="" class="btn-primary" target="_blank">Try prototype</a>
              </div>
              
           </div>
@@ -146,6 +145,10 @@
                    <h3> {{ solution.h1 }}</h3>
                    <p>{{ solution.p1 }}</p>
                 </div>
+                <div class="section-paragraph">
+                   <h3> {{ solution.h2 }}</h3>
+                   <p>{{ solution.p2 }}</p>
+                </div>
              </div>
           </div>
        </section>
@@ -205,6 +208,26 @@
              </div>
           </div>
        </section>
+
+       <section>
+         <div class="project-section container rebond-section background">
+            <div class="up-arrow" @click="goUP()">
+               <img src="../../assets/icons/back-arrow.svg" alt="">
+            </div>
+            <div class="rebond-right">
+               <div class="rebond-picture">
+                  <img :src="rebond.image" alt="">
+               </div>
+               <div class="rebond-data">
+                  <div class="rebond-title">
+                     <h3>{{ rebond.title }}</h3>
+                     <p>{{rebond.subtitle}}</p>
+                  </div>
+                  <a :href="rebond.link" class="btn-primary">Discover next project</a>
+               </div>
+            </div>
+         </div>
+      </section>
  
     </div>
  </template>
@@ -236,7 +259,7 @@
           process: {
              title: "PROCESS",
              image: require("../../assets/images/projects/legid/process.svg"),
-             h1: "Design Thinking : Full scope",
+             h1: "Design Thinking: Full scope",
              p1: "We only have a week end to work, so obviously we won’t achieve a fine tuned enterprise. However we will confirm the existence of a problem, explore it, imagine solution and test their potential. In terms of the design thinking approach, this will cover the whole scope from problem to solution. Even if each part will be cover quickly.",
              botImage: require("../../assets/images/projects/legid/timeline.svg"),
           },
@@ -283,7 +306,7 @@
              h1: "MVP Approach",
              p1: "In the second part of the afternoon, following our exchanges we have to imagine our solution to allow the 'transmission of our digital heritage'. At first, thanks to a new brainstorming we evoke the possibility of a platform of sharing passwords with the wishes of the deceased person. We could thus choose to delete our Facebook account but keep our Instagram photos. In view of the security constraints that this poses we chose to focus on the core of our topic. We therefore first thought about a solution to allow families to easily request the deletion of their loved ones' accounts.",
              h2: "Test and learn",
-             p2: "To verify the interest of our solution, we contacted funeral homes. Through these exchanges they told us that according to them this service could interest the families and they would even be ready to put forward this service in their prestations.",
+             p2: "To verify the interest of our solution, we contacted funeral homes. Through these exchanges they told us that according to them this service could interest families and they would even be interested to add this service in their prestations.",
           },
  
           conception: {
@@ -291,17 +314,17 @@
              sections: [
                 {
                    subtitle: "Value Proposition",
-                   description: "X",
-                   image: require("../../assets/images/projects/matematch/flow.jpg"),
+                   description: "LegID is based on a B2B2C model. Our goal is to offer our service to the families of the deceased through the intermediary of funeral directors, who thus complete their service offers. Our offer is thus sold in a package by the undertakers. We are thus put in direct contact with the families who need it. In return, the undertaker receives a commission.",
+                   image: require("../../assets/images/projects/legid/flow.svg"),
                 },
                 {
                    subtitle: "Product viability",
-                   description: "X",
-                   image: require("../../assets/images/projects/matematch/sketch.jpg"),
+                   description: "Every year, more than 600 000 people die in France. To give us an idea of the potential stagnant data that this represents, we focused on email addresses (necessary to open any other account). It is thus not less than 400 000 e-mail address holders who die each year in France. According to the interviews we have been able to conduct, we estimate that we could help 130,000 people. In terms of market this represents a potential of 6.5M € each year.",
+                   image: require("../../assets/images/projects/legid/viability.svg"),
                 },
                 {
                    subtitle: "Landing Page",
-                   description: "X",
+                   description: "First of all, in order to sensitize the families but also the undertakers about the data life cycle, I chose to design a landing page. The biggest difficulty here was to find an adequate message. Death being a sensitive subject, I had to find the right tone. As we are also dealing with environmental and technological issues, I took the liberty to use brighter colors and some illustrations. It is necessary to remember that this subject must be understood early, it is thus necessary to include the youngest in its comprehension, that can pass by the aesthetics of our page which I wanted pleasant.",
                    image: require("../../assets/images/projects/legid/cover.png"),
                 },
              ]
@@ -324,7 +347,22 @@
              image: require("../../assets/images/projects/legid/conclusion.jpg"),
              p1: "The jury selected us as the winner, so we won a nice trophy but also the possibility to be incubated in the Centrale-Audencia incubator. After working long hours on a project like this one, we realized how important it is to build a team in a project. In our case, we are all students at different ages and working on a project for a weekend together is quite different from working on it for years. So we preferred to decline the offer so that everyone could work on other projects.",
           },
+
+          rebond: {
+            title: "Matematch",
+            subtitle: "10 days to help foreign students live a deeper exchange experience",
+            link: "/matematch",
+            image: require('../../assets/images/projects/matematch/cover.png'),
+         },
        }
+   },
+   methods: {
+        goUP() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+        }
       }
  }
  </script>
@@ -354,6 +392,10 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+   }
+
+   .cover-project {
+      max-height: 30rem;
    }
    .project-section {
       padding: 2rem;
@@ -416,6 +458,49 @@
       width: 100%;
       margin: 0 auto;
    }
+
+   .header-filler {
+      width: 2rem;
+   }
+
+   .arrow-back-big {
+      display: none;
+   }
+
+   
+   .rebond-picture {
+      width: 80%;
+      object-fit: contain;
+      margin: 0 auto;
+   }
+
+   .rebond-picture img{
+      max-height: 30rem;
+      object-fit: contain;
+   }
+
+   .rebond-data {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      height: 100%;
+   }
+
+   .rebond-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .rebond-section {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+      justify-content: space-between;
+   }
 }
 
 /* =============== Big devices ================ */
@@ -459,6 +544,7 @@
       flex-direction: column;
       gap: 2rem;
       width: 50vw;
+      padding: 0 4rem;
    }
 
    .project-section img{
@@ -494,9 +580,10 @@
       width: 100%;
       height: 90vh;
       padding: 2rem 1rem;
+      display : flex;
+      justify-content: center;
    }
    .prototype img {
-      width: 30%;
       height: 100%;
       object-fit: contain;
    }
@@ -504,10 +591,65 @@
       width: 50%;
       margin: 0 auto;
    }
+
+   .arrow-back-big {
+      width: 2rem;
+      height: fit-content;
+      top: 7rem;
+      left: 4rem;
+      position: absolute;
+   } 
+
+   .arrow-back-small {
+      display: none;
+   }
+
+   .header-filler {
+      display: none;
+   }
+
+   
+   .rebond-picture {
+      width: 20rem;
+      height: 100%;
+   }
+
+   .rebond-data {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      height: 100%;
+   }
+
+   .rebond-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .rebond-section {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      max-height: 90vh;
+      justify-content: space-between;
+   }
+
+   .rebond-right {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      max-height: 90vh;
+      max-width: 50%;
+   }
 }
 
 
-   .left-card img {
+   .cover-project {
       height: 100%;
       object-fit: contain;
    }
@@ -527,26 +669,6 @@
 
    .header-project h1 {
       font-weight: var(--medium);
-   }
-
-   .line1, .line2 {
-      width: 30px;
-      height: 2px;
-      background-color: var(--black100);
-   }
-
-   .line1 {
-      transform: rotate(-45deg) translate(-10px, 6px);
-   }
-
-   .line2 {
-      transform: rotate(45deg) translate(4.5px, 9px);
-   }
-
-   .close-icon {
-      position: relative;
-      width: 1.5rem;
-      height: 1.5rem;
    }
 
    .hero-subtitle h4{
@@ -611,4 +733,25 @@
       max-width: 100%;
       object-fit: contain;
    }
+   .section-paragraph h3 {
+      font-size: 1.2rem;
+   }
+
+   .up-arrow {
+      transform: rotate(90deg);
+      background-color: var(--black30);
+      border-radius: 200rem;
+      padding: 1rem;
+   }
+
+   .up-arrow:hover {
+      opacity: 0.8;
+      cursor: pointer;
+   }
+
+   .up-arrow img {
+      width: 2rem;
+      height: 2rem;
+   }
+
 </style>

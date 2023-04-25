@@ -1,6 +1,6 @@
 <template>
-    <div class="projects-section">
-        <div class="projects-slider">
+    <div class="projects-section" >
+        <div class="projects-slider" @scroll.passive="displayProject()">
             <div class="project-card background" v-for="(project, index) in projects" :key="project">
                 <div class="left-card ">
                     <div class="project-image">
@@ -38,7 +38,7 @@
 
         <div class="projects-nav">
             <div v-for="(project, index) in projects" :key="project">
-                <div class="pointer" v-bind:class="activeProject === index? 'active-project': 'inactive-project'" @click="activeProject = index, scrollProject(activeProject)">
+                <div class="pointer project-number-nav" v-bind:class="activeProject === index? 'active-project': 'inactive-project'" @click="activeProject = index, scrollProject(index), displayProject()">
                     0{{ index +1}}
                 </div>
             </div> 
@@ -60,7 +60,7 @@ export default {
                     kpi: [
                         {
                         number: "9",
-                        data: "weeks",
+                        data: "Weeks",
                         info: "to learn coding",
                         },
                         {
@@ -114,16 +114,32 @@ export default {
             slider.scrollTo(target, 0);
         },
 
-        // activateProject(index) {
-            // ('.projects-slider').scrollWidth   => total scrollable
-            // somme des index => nombre de projet
-            // total scrollable / nrb de projet => largeur d'un projet
+        displayProject() {
+            // Get current readable project
+            const slider =  document.querySelector('.projects-slider');
+            const card = document.querySelector('.project-card');
+            
+            // this.activeProject = slider.scrollLeft / card.offsetWidth;
+            var activeProject = slider.scrollLeft / card.offsetWidth;
 
-            // for X project
-            //      if ('.projects-slider') scroll left <= X*largeur d'un projet
-            //      active project = X
-        // }
-    }
+            // Nav adjust to current project
+            const numbers = document.querySelectorAll('.project-number-nav');
+
+            numbers.forEach((number, index) => {
+                number.classList.remove('inactive-project')
+                number.classList.remove('active-project')
+                if (index === activeProject) {
+                    number.classList.add('active-project')
+                }
+                else {
+                    number.classList.add('inactive-project')
+                }
+            });
+        },
+    },
+    beforeUpdate() {
+        this.displayProject()
+    },
 }
 </script>
    
@@ -204,7 +220,7 @@ export default {
         scroll-behavior: smooth;
     }
 
-    .project-subtitle .project-description{
+    .project-subtitle, .project-description{
         text-align: left;
     }
 
@@ -251,15 +267,17 @@ export default {
 }
 
 .active-project {
-    font-size: 2rem;
-    font-weight: var(--semi-bold);
-    color: var(--black100);
+    font-size: 2rem !important;
+    font-weight: var(--semi-bold) !important;
+    color: var(--black100)!important; 
+    transition: ease-in 0.2s;
 }
 
 .inactive-project{
     font-size: 2rem;
     font-weight: var(--semi-bold);
     color: var(--black50);
+    transition: ease-in 0.2s;
 }
 
 .projects-slider::-webkit-scrollbar {
@@ -283,6 +301,10 @@ export default {
     color: var(--black80);
     font-weight: var(--medium);
 }
+/* 
+.project-subtitle {
+    font-size: 1.5rem;
+} */
 
 .project-image {
     display: flex;
@@ -302,9 +324,6 @@ export default {
     background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../src/assets/images/background.jpg)
 }
 
-.pointer:hover {
-    cursor: pointer;
-}
 
 .inactive-project:hover {
     color: var(--black30);

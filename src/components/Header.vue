@@ -1,9 +1,3 @@
-<script>
-export default {
-  name: 'headerItem',
-}
-</script>
-
 <template>
    <header>
       <div class="header">
@@ -13,14 +7,14 @@ export default {
         </a>
 
         <nav class="navbar">
-          <ul class="nav-links">
+          <ul @click="openMenu()" class="nav-links">
             <router-link class="nav-link" to="/">Home</router-link>
             <router-link class="nav-link" to="/about">About</router-link>
             <router-link class="nav-link" to="/contact">Contact</router-link>
           </ul>
         </nav>
 
-        <div class="burger">
+        <div @click="openMenu()" class="burger">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
@@ -30,6 +24,24 @@ export default {
   <router-view />
 </template>
 
+<script>
+export default {
+  name: 'headerItem',
+  methods: {
+    openMenu() {
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav-links');
+      const body = document.querySelector('body');
+
+  // Ouvre le dropdown menu et le ferme en cliquant sur l'icône
+        nav.classList.toggle('nav-active');
+        burger.classList.toggle('toggle');
+        // Empêche de scroller sur le reste de la page quand la navbar est ouverte
+        body.classList.toggle('no-scroll');
+    },
+  },
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
@@ -37,7 +49,9 @@ export default {
 /* =============== Small devices ================ */
 @media screen and (max-width: 930px) {
   .burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
   .nav-links {
@@ -51,7 +65,7 @@ export default {
     align-items: center;
     width: 100%;
     z-index: 9998;
-    padding: 15rem 2rem;
+    padding: 10rem 2rem;
     transform: translateX(100%);
     transition: all 0.7s ease-in;
     gap: 5rem;
@@ -74,6 +88,35 @@ export default {
 
   .brand {
     z-index: 9999;
+  }
+
+
+  .nav-active {
+    transform: translateX(0%) !important;
+    transition: all 0.5s ease-in;
+  }
+
+  /* =========== Animation transition menu burger / croix */
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5.5px, -5px);
+  }
+
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .nav-link {
+    padding: 2rem;;
   }
 }
 
@@ -99,6 +142,21 @@ export default {
     gap: 3rem;
     align-items: center;
   }
+
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: var(--black100);
+    height: 1.5px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+  }
+
+  .nav-link:hover:after {
+      width: 100%;
+  } 
 }
 
 
@@ -126,31 +184,15 @@ export default {
   color: var(--black100);
 }
 
-.nav-link:after {
-    content: "";
-    position: absolute;
-    background-color: var(--black100);
-    height: 1.5px;
-    width: 0;
-    left: 0;
-    bottom: -5px;
-    transition: 0.4s;
-}
-
-.nav-link:hover:after {
-    width: 100%;
-} 
-
 .burger {
   cursor: pointer;
   z-index: 9999;
 }
 
 .burger div {
-  width: 35px;
+  width: 2rem;
   height: 3px;
   background-color: var(--black100);
-  margin: 6px;
   transition: all 0.3s ease;
 }
 
