@@ -38,7 +38,7 @@
              </div>
  
              <div class="cta">
-                <a href="" class="btn-primary" target="_blank">Try prototype</a>
+                <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?node-id=2-925&scaling=scale-down&page-id=2%3A923&hide-ui=1" class="btn-primary" target="_blank">Try prototype</a>
              </div>
              
           </div>
@@ -349,10 +349,10 @@
           },
 
           rebond: {
-            title: "Matematch",
-            subtitle: "10 days to help foreign students live a deeper exchange experience",
-            link: "/matematch",
-            image: require('../../assets/images/projects/matematch/cover.png'),
+            title: "Mokaba",
+            subtitle: "Redesign the website of a German mobile coffee shop",
+            link: "/mokaba",
+            image: require('../../assets/images/projects/mokaba/cover.png'),
          },
        }
    },

@@ -102,6 +102,31 @@ export default {
                     url: "/legid",
                     image: require('../assets/images/projects/legid/cover.png')
                 },
+
+                {
+                    title: "MOKABA",
+                    subtitle: "Redesign the website of a German mobile coffee shop",
+                    description: "My first side project including a business owner with a real problematic. On this project I worked from interviews and framing the needs to the design.",
+                    kpi: [
+                        {
+                        number: "1",
+                        data: "Website",
+                        info: "to redesign",
+                        },
+                        {
+                        number: "2",
+                        data: "Owners",
+                        info: "to partner with",
+                        },
+                        {
+                        number: "",
+                        data: "",
+                        info: "",
+                        },
+                    ],
+                    url: "/mokaba",
+                    image: require('../assets/images/projects/mokaba/cover.png')
+                },
             ]
         }
     },

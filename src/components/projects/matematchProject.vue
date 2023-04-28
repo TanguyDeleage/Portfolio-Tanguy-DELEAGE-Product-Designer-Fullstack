@@ -38,7 +38,7 @@
             </div>
 
             <div class="cta">
-               <a href="" class="btn-primary" target="_blank">Try prototype</a>
+               <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?node-id=2-252&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A252&hide-ui=1" class="btn-primary" target="_blank">Try prototype></a>
                <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary" target="_blank">Product pitch</a>
             </div>
             
@@ -170,7 +170,7 @@
                </div>
             </div>
             <div>
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/1AYKmFTObQQ?start=2435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/1AYKmFTObQQ?start=2442" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
          </div>
       </section>
@@ -198,6 +198,8 @@
                </div>
             </div>
          </div>
+
+        
       </section>
 
    </div>

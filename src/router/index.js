@@ -6,6 +6,7 @@ import ContactSection from '../components/pages/Contact.vue'
 
 import matematchProject from '../components/projects/matematchProject.vue'
 import legidProject from '../components/projects/legidProject.vue'
+import mokabaProject from '../components/projects/mokabaProject.vue'
 
 
 const routes = [
@@ -28,6 +29,10 @@ const routes = [
     {
         path: '/legid',
         component: legidProject
+    },
+    {
+        path: '/mokaba',
+        component: mokabaProject
     }
 ]
 
