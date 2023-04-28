@@ -27,7 +27,8 @@
         <h3 class="dark-text">Let’s discuss it together !</h3>
       </div>
 
-      <a href="/contact" class="btn-primary">Contact</a>
+      <!-- <a href="/contact" class="btn-primary">Contact</a> -->
+      <router-link class="btn-primary" to="/contact">Contact</router-link>
       
     </div>
 </template>

@@ -12,7 +12,8 @@
           
           <div class="cta">
             <div class="btn-primary" @click="toPortfolio()" href="">View Portfolio</div>
-            <a class="btn-secondary" href="/contact">Contact</a>
+            <!-- <a class="btn-secondary" href="/contact">Contact</a> -->
+            <router-link class="btn-primary" to="/contact">Contact</router-link>
           </div>
             
         </div>

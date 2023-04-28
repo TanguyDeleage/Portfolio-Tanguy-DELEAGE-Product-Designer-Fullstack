@@ -166,7 +166,7 @@
                <div class="section-paragraph">
                   <h3> {{ pitch.h1 }}</h3>
                   <p>{{ pitch.p1 }}</p>
-                  <a href=""></a>
+                  <!-- <a href=""></a> -->
                </div>
             </div>
             <div>
