@@ -30,7 +30,8 @@
                         </div>
                         
                         <!-- <router-link class="btn-primary" :href=" project.url" to="/matematch">Learn more</router-link> -->
-                        <a :href=" project.url" class="btn-primary"> Learn more</a>
+                        <!-- <a :href=" project.url" class="btn-primary"> Learn more</a> -->
+                        <router-link :to="project.url" class="btn-primary"> Learn more</router-link>
                     </div>
                 </div>
             </div>
