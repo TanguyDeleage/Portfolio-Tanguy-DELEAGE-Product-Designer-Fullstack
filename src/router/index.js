@@ -13,43 +13,39 @@ const routes = [
     {
         path: '/',
         component: HomeSection,
-        meta: { scrollToTop: true }
     },
     {
         path: '/about',
         component: AboutSection,
-        meta: { scrollToTop: true }
     },
     {
         path: '/contact',
         component: ContactSection,
-        meta: { scrollToTop: true }
     },
     {
         path: '/matematch',
         component: matematchProject,
-        meta: { scrollToTop: true }
     },
     {
         path: '/legid',
         component: legidProject,
-        meta: { scrollToTop: true }
     },
     {
         path: '/mokaba',
         component: mokabaProject,
-        meta: { scrollToTop: true }
     },
     {
         path: '/:pathMatch(.*)*',
         component: HomeSection,
-        meta: { scrollToTop: true }
     }
 ]
 
 const router = createRouter ({
     history: createWebHistory(),
     routes,
+    scrollBehavior() {
+        window.scrollTo(0, 0)
+    },
 })
 
 export default router
