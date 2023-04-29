@@ -28,7 +28,7 @@
             <input type="hidden" name="_next" value="/">
             <input type="hidden" name="_subject" value="New contact request from portfolio">
 
-            <btn href="" type="submit" class="btn-primary">Submit</btn>
+            <btn type="submit" class="btn-primary">Submit</btn>
         </form>
     </div>
  </template>
