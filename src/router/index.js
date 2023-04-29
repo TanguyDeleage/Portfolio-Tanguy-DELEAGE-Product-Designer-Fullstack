@@ -33,12 +33,19 @@ const routes = [
     {
         path: '/mokaba',
         component: mokabaProject
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        component: HomeSection
     }
 ]
 
 const router = createRouter ({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        return { top:0 }
+    }
 })
 
 export default router

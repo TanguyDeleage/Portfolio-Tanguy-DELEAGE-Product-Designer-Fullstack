@@ -1,3 +1,7 @@
+<template>
+  <headerItem />
+</template>
+
 <script>
 import headerItem from './components/Header.vue'
 export default {
@@ -7,11 +11,6 @@ export default {
   }
 }
 </script>
-
-
-<template>
-   <headerItem />
-</template>
 
 
 <style>
