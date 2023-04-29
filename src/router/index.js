@@ -12,44 +12,44 @@ import mokabaProject from '../components/projects/mokabaProject.vue'
 const routes = [
     {
         path: '/',
-        component: HomeSection
+        component: HomeSection,
+        meta: { scrollToTop: true }
     },
     {
         path: '/about',
-        component: AboutSection
+        component: AboutSection,
+        meta: { scrollToTop: true }
     },
     {
         path: '/contact',
-        component: ContactSection
+        component: ContactSection,
+        meta: { scrollToTop: true }
     },
     {
         path: '/matematch',
-        component: matematchProject
+        component: matematchProject,
+        meta: { scrollToTop: true }
     },
     {
         path: '/legid',
-        component: legidProject
+        component: legidProject,
+        meta: { scrollToTop: true }
     },
     {
         path: '/mokaba',
-        component: mokabaProject
+        component: mokabaProject,
+        meta: { scrollToTop: true }
     },
     {
         path: '/:pathMatch(.*)*',
-        component: HomeSection
+        component: HomeSection,
+        meta: { scrollToTop: true }
     }
 ]
 
 const router = createRouter ({
     history: createWebHistory(),
     routes,
-    scrollBehavior (to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition;
-        } else {
-            return { x: 0, y: 0 };
-        }
-    }
 })
 
 export default router
