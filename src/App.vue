@@ -56,11 +56,6 @@ img {
     cursor: pointer;
   }
 
-  .btn-primary:hover, .btn-secondary:hover {
-    box-shadow: 0.5rem 0.5rem var(--black100);
-    transition: 0.2s ease-out ;
-  }
-
   .btn-secondary {
     border: 3px solid black;
     background-color: white;
@@ -81,14 +76,22 @@ img {
     font-weight: var(--semi-bold);
   }
 
+  .background {
+    background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.jpg);
+  }
+
+  /* =============== Hover ================ */
+@media screen and (min-width: 930px) {
+  .btn-primary:hover, .btn-secondary:hover {
+    box-shadow: 0.5rem 0.5rem var(--black100);
+    transition: 0.2s ease-out ;
+  }
   .btn-tertiary:hover, .brand:hover{
     filter: contrast(0.3);
     transition: 0.2s ease-out ;
   }
 
-  .background {
-    background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.jpg);
-  }
+}
 
 
 /* =========================   Headers ========================= */
