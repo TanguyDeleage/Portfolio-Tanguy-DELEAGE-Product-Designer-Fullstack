@@ -21,10 +21,12 @@
         <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact@tanguydeleage.com" method="POST">
             <div v-for="(input, index) in inputs" :key="input" class="form-input">
                 <label :for="input.label">{{ input.label }}</label>
-                <input v-if="index != 2" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form">
-                <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form"></textarea>
+                <input v-if="index != 2" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required>
+                <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required></textarea>
                 
             </div>
+            <input type="hidden" name="_next" value="/">
+            <input type="hidden" name="_subject" value="New contact request from portfolio">
 
             <btn href="" type="submit" class="btn-primary">Submit</btn>
         </form>
