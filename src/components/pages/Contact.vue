@@ -21,7 +21,7 @@
         <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact@tanguydeleage.com" method="POST">
             <div v-for="(input, index) in inputs" :key="input" class="form-input">
                 <label :for="input.label">{{ input.label }}</label>
-                <input v-if="index != 2" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required>
+                <input v-if="index != 2" :type="input.type" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required>
                 <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required></textarea>
                 
             </div>
@@ -62,14 +62,17 @@ export default {
                 {
                     label: "Name",
                     placeholder: "Archibald Haddock",
+                    type: "text"
                 },
                 {
                     label: "Email",
                     placeholder: "capitainehaddock@gmail.com",
+                    type: "email"
                 },
                 {
                     label: "Message",
                     placeholder: "Hello,",
+                    type: "text"
                 }
             ]
         }
