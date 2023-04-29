@@ -25,10 +25,10 @@
                 <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required></textarea>
                 
             </div>
-            <input type="hidden" name="_next" value="/">
+            <input type="hidden" name="_next" value="https://tanguydeleage.github.io/portfolio-vue/">
             <input type="hidden" name="_subject" value="New contact request from portfolio">
 
-            <btn type="submit" class="btn-primary">Submit</btn>
+            <btn type="submit" class="btn-primary">Send</btn>
         </form>
     </div>
  </template>
