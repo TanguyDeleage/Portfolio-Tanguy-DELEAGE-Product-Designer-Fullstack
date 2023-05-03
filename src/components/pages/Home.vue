@@ -39,7 +39,7 @@
     <PortfolioItems />
   </section>
 
-  </template>
+</template>
    
    <script>
    import PortfolioItems from '../Portfolio.vue'

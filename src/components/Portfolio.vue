@@ -71,7 +71,7 @@ export default {
                         },
                         {
                         number: "+1100",
-                        data: "View",
+                        data: "Views",
                         info: "on the product pitch",
                         },
                     ],
@@ -163,9 +163,9 @@ export default {
             });
         },
     },
-    beforeUpdate() {
-        this.displayProject()
-    },
+    // beforeUpdate() {
+    //     this.displayProject()
+    // },
 }
 </script>
    
@@ -274,6 +274,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-top: 2px solid var(--black100);
     }
     .project-number{
         font-size: 4rem;

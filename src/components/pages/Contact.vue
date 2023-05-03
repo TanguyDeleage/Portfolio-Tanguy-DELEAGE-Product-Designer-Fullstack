@@ -244,8 +244,8 @@ export default {
     gap: 1rem;
 }
 
-.last-input{
-    background-color: blue;
+button {
+    border: none;
 }
 </style>
     
