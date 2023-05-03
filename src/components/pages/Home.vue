@@ -19,7 +19,7 @@
         </div>
 
         <div class="hero-picture">
-        <img src="https://www.tanguydeleage.com/assets/img/hero-picture.jpeg" alt="">
+          <img src="../../assets/images/hero-picture.jpeg" alt="">
         </div>
     </section>
 
