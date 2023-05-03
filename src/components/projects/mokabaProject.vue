@@ -142,7 +142,7 @@
                       <p>{{rebond.subtitle}}</p>
                    </div>
                    <!-- <a :href="rebond.link" class="btn-primary">Discover next project</a> -->
-                   <router-link class="btn-primary" to="rebond.link">Discover next project</router-link>
+                   <router-link class="btn-primary" :to="rebond.link">Discover next project</router-link>
                 </div>
              </div>
           </div>
