@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/tanguydeleage0@gmail.com" method="POST">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact@tanguydeleage.com" method="POST">
             <div v-for="(input, index) in inputs" :key="input" class="form-input">
                 <label :for="input.label">{{ input.label }}</label>
                 <input v-if="index != 2" :type="input.type" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required>
@@ -28,7 +28,7 @@
             <input type="hidden" name="_next" value="https://tanguydeleage.github.io/portfolio-vue/">
             <input type="hidden" name="_subject" value="New contact request from portfolio">
 
-            <btn type="submit" class="btn-primary">Send</btn>
+            <button type="submit" class="btn-primary">Send</button>
         </form>
     </div>
  </template>
