@@ -38,7 +38,7 @@
              </div>
  
              <div class="cta">
-                <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?node-id=10-506&scaling=scale-down&page-id=2%3A2&hide-ui=1" class="btn-primary" target="_blank">Try prototype></a>
+                <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?node-id=10-506&scaling=scale-down&page-id=2%3A2&hide-ui=1" class="btn-primary" target="_blank">Try prototype</a>
              </div>
              
           </div>
