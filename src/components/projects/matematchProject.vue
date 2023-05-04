@@ -49,7 +49,7 @@
          <h2 class="section-title">{{ challenge.title }}</h2>
          <div class="flex-section">
             <div>
-               <img :src="challenge.image" alt="">
+               <img :src="challenge.image" alt="" loading="lazy">
             </div>
             <div class="section-text">
                <div class="section-paragraph">
@@ -74,11 +74,11 @@
                </div>
             </div>
             <div>
-               <img :src="process.image" alt="">
+               <img :src="process.image" alt="" loading="lazy">
             </div>
          </div>
          <div class="full-width">
-            <img :src="process.botImage" alt="">
+            <img :src="process.botImage" alt="" loading="lazy">
          </div>
       </section>
 
@@ -96,7 +96,7 @@
                </div>
             </div>
             <div>
-               <img :src="research.image" alt="">
+               <img :src="research.image" alt="" loading="lazy">
             </div>
          </div>
       </section>
@@ -121,7 +121,7 @@
          <div class="design-section">
             <div v-for="section in design.sections" :key="section" class="flex-section background design-sections">
                 <div class="design-image">
-                  <img :src="section.image" alt="">
+                  <img :src="section.image" alt="" loading="lazy">
                </div>
                <div class="section-text design-text">
                   <div class="section-paragraph">
@@ -137,9 +137,9 @@
          <!-- <h2 class="section-title">{{ prototype.title }}</h2> -->
          <div class="prototype-section">
             <div class="flex-section background prototype">
-               <img :src="prototype.image" alt="">
-               <img :src="prototype.image1" alt="">
-               <img :src="prototype.image2" alt="">
+               <img :src="prototype.image" alt="" loading="lazy">
+               <img :src="prototype.image1" alt="" loading="lazy">
+               <img :src="prototype.image2" alt="" loading="lazy">
             </div>
          </div>
       </section>
@@ -148,7 +148,7 @@
          <h2 class="section-title">{{ development.title }}</h2>
          <div class="flex-section">
             <div>
-               <img :src="development.image" alt="">
+               <img :src="development.image" alt="" loading="lazy">
             </div>
             <div class="section-text">
                <div class="section-paragraph">
@@ -187,7 +187,7 @@
             </div>
             <div class="rebond-right">
                <div class="rebond-picture">
-                  <img :src="rebond.image" alt="">
+                  <img :src="rebond.image" alt="" loading="lazy">
                </div>
                <div class="rebond-data">
                   <div class="rebond-title">

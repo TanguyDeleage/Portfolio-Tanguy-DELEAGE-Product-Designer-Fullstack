@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="contact-footer">
-                <span class="signature"> <img src="https://www.tanguydeleage.com/assets/img/logo.svg" width="24" height="27" alt="Logo Tanguy DELEAGE"> <p>Tanguy Deléage</p> </span>
+                <span class="signature"> <img src="../../assets/logo.svg" width="24" height="27" alt="Logo Tanguy DELEAGE"> <p>Tanguy Deléage</p> </span>
                 <p class="contact-description">Feel free to share your thoughts and questions. I’m always open to exchange about new projects.</p>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <textarea v-else class="big-input" type="text" :placeholder= "input.placeholder" :name="input.label" form="contact-form" required></textarea>
                 
             </div>
-            <input type="hidden" name="_next" value="https://tanguydeleage.github.io/portfolio-vue/">
+            <input type="hidden" name="_next" value="https://tanguydeleage.com/">
             <input type="hidden" name="_subject" value="New contact request from portfolio">
 
             <button type="submit" class="btn-primary">Send</button>
@@ -158,6 +158,7 @@ export default {
         padding: 4rem 4rem;
         gap: 2rem;
         align-items: center;
+        justify-content: center;
     } 
     .contact-form input {
     background-color: var(--secondary);

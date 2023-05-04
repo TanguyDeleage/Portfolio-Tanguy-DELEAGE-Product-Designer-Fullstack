@@ -9,7 +9,7 @@
           <div class="right-card background">
              <div class="right-card-info">
                 <div class="header-project">
-                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" @click="$router.go(-1)" alt="">
+                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="">
                    <h1>{{ project.title }}</h1>
                    <div class="header-filler"></div>
                 </div>
@@ -48,7 +48,7 @@
           <h2 class="section-title">{{ challenge.title }}</h2>
           <div class="flex-section">
              <div>
-                <img :src="challenge.image" alt="">
+                <img :src="challenge.image" alt="" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -69,11 +69,11 @@
                 </div>
              </div>
              <div>
-                <img :src="process.image" alt="">
+                <img :src="process.image" alt="" loading="lazy">
              </div>
           </div>
           <div class="full-width">
-             <img :src="process.botImage" alt="">
+             <img :src="process.botImage" alt="" loading="lazy">
           </div>
        </section>
  
@@ -91,7 +91,7 @@
                 </div>
              </div>
              <div>
-                <img :src="research.image" alt="">
+                <img :src="research.image" alt="" loading="lazy">
              </div>
           </div>
        </section>
@@ -117,7 +117,7 @@
           <!-- <h2 class="section-title">{{ prototype.title }}</h2> -->
           <div class="prototype-section">
              <div class="flex-section background prototype">
-                <img :src="prototype.image" alt="">
+                <img :src="prototype.image" alt="" loading="lazy">
              </div>
           </div>
        </section>
@@ -130,11 +130,11 @@
        <section>
           <div class="project-section container rebond-section background">
              <div class="up-arrow" @click="goUP()">
-                <img src="../../assets/icons/back-arrow.svg" alt="">
+                <img src="../../assets/icons/back-arrow.svg" alt="" loading="lazy">
              </div>
              <div class="rebond-right">
                 <div class="rebond-picture">
-                   <img :src="rebond.image" alt="">
+                   <img :src="rebond.image" alt="" loading="lazy">
                 </div>
                 <div class="rebond-data">
                    <div class="rebond-title">

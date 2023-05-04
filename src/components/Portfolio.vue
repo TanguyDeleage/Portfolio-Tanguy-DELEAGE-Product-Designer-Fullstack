@@ -4,7 +4,7 @@
             <div class="project-card background" v-for="(project, index) in projects" :key="project">
                 <div class="left-card ">
                     <div class="project-image">
-                        <img :src="project.image" alt="">
+                        <img :src="project.image" alt="" loading="lazy">
                     </div>
                     <div class="project-skills">
 
