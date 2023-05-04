@@ -9,7 +9,7 @@
           <div class="right-card background">
              <div class="right-card-info">
                 <div class="header-project">
-                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="">
+                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="Arrow back">
                    <h1>{{ project.title }}</h1>
                    <div class="header-filler"></div>
                 </div>
@@ -48,7 +48,7 @@
           <h2 class="section-title">{{ challenge.title }}</h2>
           <div class="flex-section">
              <div>
-                <img :src="challenge.image" alt="" loading="lazy">
+                <img :src="challenge.image" :alt="challenge.alt" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -69,11 +69,11 @@
                 </div>
              </div>
              <div>
-                <img :src="process.image" alt="" loading="lazy">
+                <img :src="process.image" :alt="process.alt" loading="lazy">
              </div>
           </div>
           <div class="full-width">
-             <img :src="process.botImage" alt="" loading="lazy">
+             <img :src="process.botImage" alt="Process" loading="lazy">
           </div>
        </section>
  
@@ -91,7 +91,7 @@
                 </div>
              </div>
              <div>
-                <img :src="research.image" alt="" loading="lazy">
+                <img :src="research.image" :alt="research.alt" loading="lazy">
              </div>
           </div>
        </section>
@@ -101,7 +101,7 @@
           <div class="design-section">
              <div v-for="section in design.sections" :key="section" class="flex-section background design-sections">
                  <div class="design-image">
-                   <img :src="section.image" alt="">
+                   <img :src="section.image" :alt="section.alt">
                 </div>
                 <div class="section-text design-text">
                    <div class="section-paragraph">
@@ -117,7 +117,7 @@
           <!-- <h2 class="section-title">{{ prototype.title }}</h2> -->
           <div class="prototype-section">
              <div class="flex-section background prototype">
-                <img :src="prototype.image" alt="" loading="lazy">
+                <img :src="prototype.image" :alt="prototype.alt" loading="lazy">
              </div>
           </div>
        </section>
@@ -130,7 +130,7 @@
        <section>
           <div class="project-section container rebond-section background">
              <div class="up-arrow" @click="goUP()">
-                <img src="../../assets/icons/back-arrow.svg" alt="" loading="lazy">
+                <img src="../../assets/icons/back-arrow.svg" :alt="rebond.alt" loading="lazy">
              </div>
              <div class="rebond-right">
                 <div class="rebond-picture">
@@ -173,11 +173,13 @@
              image: require("../../assets/images/projects/mokaba/challenge.png"),
              h1: "Redesign the website of an itinerant coffee shop",
              p1: "I chose to help them by designing their website and then I could code it for them. The main challenge for me is that I'm starting from scratch and that we will have to exchange in English.",
+             alt: "Mokaba old website"
           },
  
           process: {
              title: "PROCESS",
              image: require("../../assets/images/projects/matematch/process.svg"),
+             alt: "Design Thinking process",
              h1: "Design Thinking: Solution focused",
              p1: "I don't have to delete the old project completely. You have to be able to keep the identity of the site, reflect their project as well as possible and especially make it clear what needs to be improved. If we were able to spend time exchanging on the needs and expectations via interviews, I consider that this project was more access on the construction of the solution.",
              botImage: require("../../assets/images/projects/mokaba/timeline.svg"),
@@ -186,6 +188,7 @@
           research: {
              title: "RESEARCH",
              image: require("../../assets/images/projects/mokaba/research.jpg"),
+             alt: "Audit process",
              h1: "UI/UX Audit",
              p1: "During my UI/UX audit, I went through the site, the different pages, tested the different paths. I tested the animations and links. I tested on different devices. I could see that the site was not responsive, the contrast levels are not high enough, making it difficult to read in places. Some images are not displayed.",
              h2: "Technical Audit",
@@ -200,26 +203,31 @@
                    subtitle: "Structure",
                    description: "Once the problems were discussed, we chose together what we would put in place. So I made various proposals for page structures. In view of the simplicity of the content, we chose to set up a 'Single Page Application', a site on a single page where the contents follow one another. Within the page we structured the content following the golden circle of Simon Sinek (Why, How, What).",
                    image: require("../../assets/images/projects/mokaba/structure.png"),
+                   alt: "Mokaba new website structure",
                 },
                 {
                    subtitle: "Fonts",
                    description: "For the fonts, I chose to use two, 'Playball' for the name Mokaba and 'Nunito' for the texts. I chose to use the Playball font which has a handwritten look to reflect the 'Homemade' aspect of the café. Finally for the texts I chose a rather minimalist and rounded font. Here my idea was to show that quality can reside in simplicity without giving a too playful aspect.",
                    image: require("../../assets/images/projects/mokaba/fonts.jpg"),
+                   alt: "Mokaba new website fonts",
                 },
                 {
                    subtitle: "Colors",
                    description: "Concerning the text colors, I stayed on white and black to keep the simple aspect, the essential. Then, for the background colors, I stayed on colors inspired by coffee and cappuccino. The colors are shades of brown and beige.",
                    image: require("../../assets/images/projects/mokaba/colors.jpg"),
+                   alt: "Mokaba new website colors",
                 },
                 {
                    subtitle: "Components",
                    description: "If the site is very simple, I still needed to create a small UI Kit, including some components. To present the products, I was able to create a product card with its version for smaller screens. I also created a second map to present the locations where the café is located. Finally I chose to use a wave element to start and end my linear background. My idea was to reproduce a liquid look, like you would get in a cup of coffee.",
                    image: require("../../assets/images/projects/mokaba/components.jpg"),
+                   alt: "Mokaba new website components",
                 },
                 {
                    subtitle: "Wireframe",
                    description: "Once all the elements were gathered, we started to bring our ideas to life by creating the wireframe. This is the black and white skeleton of the site. This is how we could choose our layout, especially for the hero section",
                    image: require("../../assets/images/projects/mokaba/wireframe.png"),
+                   alt: "Mokaba new website wireframe",
                 },
              ]
           },
@@ -227,6 +235,7 @@
           prototype: {
              title: "PROTOTYPE",
              image: require("../../assets/images/projects/mokaba/cover.png"),
+             alt: "Mokaba mockup"
           },
  
           conclusion: {
@@ -239,6 +248,7 @@
              subtitle: "10 days to help foreign students live a deeper exchange experience",
              link: "/matematch",
              image: require('../../assets/images/projects/matematch/cover.png'),
+             alt: "Matematch mockup"
           },
        }
     },

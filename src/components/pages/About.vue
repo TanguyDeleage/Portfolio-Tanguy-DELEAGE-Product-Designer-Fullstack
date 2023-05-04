@@ -3,7 +3,7 @@
 
       <div class="about">
         <div class="about-picture">
-          <img src="../../assets/images/hero-picture.jpeg" alt="">
+          <img src="../../assets/images/hero-picture.jpeg" alt="Tanguy DELEAGE">
         </div>
         <div class="about-data">
           <h1>An Atypical Product Designer</h1>

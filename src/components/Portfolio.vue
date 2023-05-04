@@ -4,7 +4,7 @@
             <div class="project-card background" v-for="(project, index) in projects" :key="project">
                 <div class="left-card ">
                     <div class="project-image">
-                        <img :src="project.image" alt="" loading="lazy">
+                        <img :src="project.image" :alt="project.alt" loading="lazy">
                     </div>
                     <div class="project-skills">
 
@@ -29,8 +29,6 @@
                             </div>
                         </div>
                         
-                        <!-- <router-link class="btn-primary" :href=" project.url" to="/matematch">Learn more</router-link> -->
-                        <!-- <a :href=" project.url" class="btn-primary"> Learn more</a> -->
                         <router-link :to="project.url" class="btn-primary"> Learn more</router-link>
                     </div>
                 </div>
@@ -76,7 +74,8 @@ export default {
                         },
                     ],
                     url: "/matematch",
-                    image: require('../assets/images/projects/matematch/cover.png')
+                    image: require('../assets/images/projects/matematch/cover.png'),
+                    alt: "Mockup of the Matematch project"
                 },
 
                 {
@@ -101,7 +100,8 @@ export default {
                         },
                     ],
                     url: "/legid",
-                    image: require('../assets/images/projects/legid/cover.png')
+                    image: require('../assets/images/projects/legid/cover.png'),
+                    alt: "Mockup of the LegID project"
                 },
 
                 {
@@ -126,7 +126,8 @@ export default {
                         },
                     ],
                     url: "/mokaba",
-                    image: require('../assets/images/projects/mokaba/cover.png')
+                    image: require('../assets/images/projects/mokaba/cover.png'),
+                    alt: "Mockup of the Matematch project"
                 },
             ]
         }

@@ -5,7 +5,6 @@
             <div>
                 <div v-for="contact in contacts" :key="contact" class="social-links">
                     <span class="social-title">{{ contact.title }}</span>
-                    <!-- Comment arriver à display l'icon ????? -->
                     <div class="social-link"> 
                         <img class="social-icon" :src="require('../../assets/icons/' +  contact.icon)" :alt="'Logo ' + contact.title">
                         <a :href="contact.link" class="btn-tertiary"> {{ contact.label }} </a>

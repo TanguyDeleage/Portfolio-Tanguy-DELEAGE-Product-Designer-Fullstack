@@ -19,14 +19,14 @@
         </div>
 
         <div class="hero-picture">
-          <img src="../../assets/images/hero-picture.jpeg" alt="">
+          <img src="../../assets/images/hero-picture.jpeg" alt="Tanguy DELEAGE">
         </div>
     </section>
 
     <section>
       <div class="logos-slider">
         <div class="logo-container container">
-          <img src="../../assets/images/entreprises/le-wagon.png" alt="Logo le wagon">
+          <img src="../../assets/images/entreprises/le-wagon.png" alt="Logo Le Wagon">
           <img src="../../assets/images/entreprises/orange.png" alt="Logo Orange">
           <img src="../../assets/images/entreprises/accenture.png" alt="Logo Accenture">
           <img src="../../assets/images/entreprises/canal.png" alt="Logo Canal+">
