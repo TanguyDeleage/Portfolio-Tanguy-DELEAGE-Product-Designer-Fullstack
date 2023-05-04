@@ -9,7 +9,7 @@
          <div class="right-card background">
             <div class="right-card-info">
                <div class="header-project">
-                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" @click="$router.go(-1)" alt="">
+                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" @click="$router.go(-1)" alt="Icon back arrow">
                   <h1>{{ project.title }}</h1>
                   <div class="header-filler"></div>
                </div>
@@ -49,7 +49,7 @@
          <h2 class="section-title">{{ challenge.title }}</h2>
          <div class="flex-section">
             <div>
-               <img :src="challenge.image" alt="" loading="lazy">
+               <img :src="challenge.image" :alt="challenge.alt" loading="lazy">
             </div>
             <div class="section-text">
                <div class="section-paragraph">
@@ -74,11 +74,11 @@
                </div>
             </div>
             <div>
-               <img :src="process.image" alt="" loading="lazy">
+               <img :src="process.image" :alt="process.alt" loading="lazy">
             </div>
          </div>
          <div class="full-width">
-            <img :src="process.botImage" alt="" loading="lazy">
+            <img :src="process.botImage" alt="Timeline" loading="lazy">
          </div>
       </section>
 
@@ -96,7 +96,7 @@
                </div>
             </div>
             <div>
-               <img :src="research.image" alt="" loading="lazy">
+               <img :src="research.image" :alt="research.alt" loading="lazy">
             </div>
          </div>
       </section>
@@ -121,7 +121,7 @@
          <div class="design-section">
             <div v-for="section in design.sections" :key="section" class="flex-section background design-sections">
                 <div class="design-image">
-                  <img :src="section.image" alt="" loading="lazy">
+                  <img :src="section.image" :alt="section.alt" loading="lazy">
                </div>
                <div class="section-text design-text">
                   <div class="section-paragraph">
@@ -134,12 +134,11 @@
       </section>
          
       <section>
-         <!-- <h2 class="section-title">{{ prototype.title }}</h2> -->
          <div class="prototype-section">
             <div class="flex-section background prototype">
-               <img :src="prototype.image" alt="" loading="lazy">
-               <img :src="prototype.image1" alt="" loading="lazy">
-               <img :src="prototype.image2" alt="" loading="lazy">
+               <img :src="prototype.image" :alt="prototype.alt1" loading="lazy">
+               <img :src="prototype.image1" :alt="prototype.alt2" loading="lazy">
+               <img :src="prototype.image2" :alt="prototype.alt3" loading="lazy">
             </div>
          </div>
       </section>
@@ -148,7 +147,7 @@
          <h2 class="section-title">{{ development.title }}</h2>
          <div class="flex-section">
             <div>
-               <img :src="development.image" alt="" loading="lazy">
+               <img :src="development.image" :alt="development.alt" loading="lazy">
             </div>
             <div class="section-text">
                <div class="section-paragraph">
@@ -166,7 +165,6 @@
                <div class="section-paragraph">
                   <h3> {{ pitch.h1 }}</h3>
                   <p>{{ pitch.p1 }}</p>
-                  <!-- <a href=""></a> -->
                </div>
             </div>
             <div>
@@ -183,18 +181,17 @@
       <section>
          <div class="project-section container rebond-section background">
             <div class="up-arrow" @click="goUP()">
-               <img src="../../assets/icons/back-arrow.svg" alt="">
+               <img src="../../assets/icons/back-arrow.svg" alt="Icon arrow up">
             </div>
             <div class="rebond-right">
                <div class="rebond-picture">
-                  <img :src="rebond.image" alt="" loading="lazy">
+                  <img :src="rebond.image" :alt="rebond.alt" loading="lazy">
                </div>
                <div class="rebond-data">
                   <div class="rebond-title">
                      <h3>{{ rebond.title }}</h3>
                      <p>{{rebond.subtitle}}</p>
                   </div>
-                  <!-- <a :href="rebond.link" class="btn-primary">Discover next project</a> -->
                   <router-link class="btn-primary" :to="rebond.link">Discover next project</router-link>
                </div>
             </div>
@@ -224,6 +221,7 @@ export default {
          challenge: {
             title: "CHALLENGE",
             image: require("../../assets/images/projects/matematch/team.jpg"),
+            alt:"Team Matematch" ,
             h1: "Build a Progressive Web App in 10 days",
             p1: "We had 10 days to design and develop our app thanks to knowledge we developed during the last 7 weeks. In a team of 3 people, this was quite a challenge.",
             h2: "Help foreigners students to connect with locals",
@@ -233,6 +231,7 @@ export default {
          process: {
             title: "PROCESS",
             image: require("../../assets/images/projects/matematch/process.svg"),
+            alt: "Design Thinking process",
             h1: "Design Thinking: Solution focused",
             p1: "Because of the bootcamp’s limit, we were solution focused to earn time and be able to develop an app in 10 days. However I choose to work on a project I had insights on, so it would compensate the fact we didn’t do a discovery phase.",
             botImage: require("../../assets/images/projects/matematch/timeline.svg"),
@@ -241,6 +240,7 @@ export default {
          research: {
             title: "RESEARCH",
             image: require("../../assets/images/projects/matematch/friends.jpg"),
+            alt: "Group of young people",
             h1: "Personal involvement",
             p1: "In 2019 I went to work in Australia. I quickly discovered how hard it could be to connect with people when you arrive in a new place. Some people end up staying with people of their own nationality, their colleagues, or classmate. Being currently the boyfriend of a foreigner girl, I saw again how hard it was to integrate groups of people, your only chance is to start a hobby and hope to meet people.",
             h2: "Based on my associative experience",
@@ -272,21 +272,25 @@ export default {
                   subtitle: "Userflow",
                   description: "We chose to build an app using two types of profiles: “explorer” and “guide”. Guides are locals, they are willing to share experience they know, with new people. Explorer are foreigners they want to meet new people through a cool activity. In order to do that, we imagined a matchmaking app based on the activity to share but also the hobbies, age, location, languages etc.",
                   image: require("../../assets/images/projects/matematch/flow.png"),
+                  alt: "Matematch userflow",
                },
                {
                   subtitle: "Sketching",
                   description: "During the sketching phase we all brought ideas on how we would like the app to look like. We would go component by component and each time choose the version we would prefer. In the same time, we would also realise a benchmark on dating apps, social networks, dribble, etc.",
                   image: require("../../assets/images/projects/matematch/sketch.jpg"),
+                  alt: "Matematch sketching",
                },
                {
                   subtitle: "Brand identity",
                   description: "I chose the name “Matematch” and then I personally worked on the brand identity including colors, images, typography, etc. I chose a yellow/orange primary color because it inspires adventures. For the font I chose “poppins” a round font that appears friendly to me.",
                   image: require("../../assets/images/projects/matematch/branding.svg"),
+                  alt: "Matematch Brand identity",
                },
                {
                   subtitle: "Mockup",
                   description: "Since my main task was to work on the design, after choosing the brand identity and after completing our sketchs and mockups, I created our mockups and a prototype. I had never designed anything before, and at this moment, I knew that I needed to continue in this way.",
                   image: require("../../assets/images/projects/matematch/mockup.jpg"),
+                  alt: "Matematch mockup",
                },
             ]
          },
@@ -294,13 +298,17 @@ export default {
          prototype: {
             title: "PROTOTYPE",
             image: require("../../assets/images/projects/matematch/flow1.png"),
+            alt1: "Matematch sign in mockup",
             image1: require("../../assets/images/projects/matematch/flow2.png"),
+            alt2: "Matematch finding a guide mockup",
             image2: require("../../assets/images/projects/matematch/flow3.png"),
+            alt3: "Matematch dashboard mockup",
          },
 
          development: {
             title: "DEVELOPMENT",
             image: require("../../assets/images/projects/matematch/development.jpg"),
+            alt: "Team matematch on their computers",
             h1: "Matematch.fr",
             p1: "First thing first we bought the domain name “matematch.fr”. Then we started to create the back end of our app. We used Ruby on Rails, a Ruby framework very intuitive and useful to quickly develop apps. On the front end, we used HTML, SCSS and JavaScript. To sync and save our work, we used the platform Github. After 10 days, our first Progressive Web App was available on matematch.fr",
          },
@@ -322,6 +330,7 @@ export default {
             subtitle: "48h to help families live an easier mourning",
             link: "/legid",
             image: require('../../assets/images/projects/legid/cover.png'),
+            alt: "LegID mockup",
          },
       }
    },

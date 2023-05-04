@@ -9,7 +9,7 @@
           <div class="right-card background">
              <div class="right-card-info">
                 <div class="header-project">
-                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="">
+                  <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="Icon Back arrow">
                    <h1>{{ project.title }}</h1>
                    <div class="header-filler"></div>
                 </div>
@@ -48,7 +48,7 @@
           <h2 class="section-title">{{ challenge.title }}</h2>
           <div class="flex-section">
              <div>
-                <img :src="challenge.image" alt="" loading="lazy">
+                <img :src="challenge.image" :alt="challenge.alt" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -73,11 +73,11 @@
                 </div>
              </div>
              <div>
-                <img :src="process.image" alt="" loading="lazy">
+                <img :src="process.image" :alt="process.alt" loading="lazy">
              </div>
           </div>
           <div class="full-width">
-             <img :src="process.botImage" alt="" loading="lazy">
+             <img :src="process.botImage" loading="lazy">
           </div>
        </section>
  
@@ -85,7 +85,7 @@
           <h2 class="section-title">{{ research.title }}</h2>
           <div class="flex-section">
             <div>
-                <img :src="research.image" alt="" loading="lazy">
+                <img :src="research.image" :alt="research.alt" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -114,7 +114,7 @@
                 </div>
              </div>
              <div>
-                <img :src="interview.image" alt="" loading="lazy">
+                <img :src="interview.image" :alt="interview.alt" loading="lazy">
              </div>
           </div>
        </section>
@@ -138,7 +138,7 @@
           <h2 class="section-title">{{ solution.title }}</h2>
           <div class="flex-section">
              <div>
-                <img :src="solution.image" alt="" loading="lazy">
+                <img :src="solution.image" :alt="solution.alt" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -158,7 +158,7 @@
           <div class="design-section">
              <div v-for="section in conception.sections" :key="section" class="flex-section background design-sections">
                  <div class="design-image">
-                   <img :src="section.image" alt="" loading="lazy">
+                   <img :src="section.image" :alt="section.alt" loading="lazy">
                 </div>
                 <div class="section-text design-text">
                    <div class="section-paragraph">
@@ -174,7 +174,7 @@
           <!-- <h2 class="section-title">{{ prototype.title }}</h2> -->
           <div class="prototype-section">
              <div class="flex-section background prototype">
-                <img :src="prototype.image" alt="" loading="lazy">
+                <img :src="prototype.image" :alt="prototype.alt" loading="lazy">
              </div>
           </div>
        </section>
@@ -183,7 +183,7 @@
           <h2 class="section-title">{{ pitch.title }}</h2>
           <div class="flex-section">
             <div>
-                <img :src="pitch.image" alt="" loading="lazy">
+                <img :src="pitch.image" :alt="pitch.alt" loading="lazy">
              </div>
              <div class="section-text">
                 <div class="section-paragraph">
@@ -204,7 +204,7 @@
                 </div>
              </div>
              <div>
-                <img :src="conclusion.image" alt="" loading="lazy">
+                <img :src="conclusion.image" :alt="conclusion.alt" loading="lazy">
              </div>
           </div>
        </section>
@@ -216,7 +216,7 @@
             </div>
             <div class="rebond-right">
                <div class="rebond-picture">
-                  <img :src="rebond.image" alt="" loading="lazy">
+                  <img :src="rebond.image" :alt="rebond.alt" loading="lazy">
                </div>
                <div class="rebond-data">
                   <div class="rebond-title">
@@ -251,6 +251,7 @@
           challenge: {
              title: "CHALLENGE",
              image: require("../../assets/images/projects/legid/challenge.jpg"),
+             alt:"Dare challenge poster",
              h1: "Create the best promising and viable startup project",
              p1: "8 groups, working from 8am to 1am to design the best start-up project. The aim is to solution a real problem, with an economically viable test it, and present it in front of a jury of 5 entrepreneurs or incubator directors.",
              h2: "Helping family with deceased data management and digital patrimony",
@@ -260,6 +261,7 @@
           process: {
              title: "PROCESS",
              image: require("../../assets/images/projects/legid/process.svg"),
+             alt: "Design Thinking process",
              h1: "Design Thinking: Full scope",
              p1: "We only have a week end to work, so obviously we won’t achieve a fine tuned enterprise. However we will confirm the existence of a problem, explore it, imagine solution and test their potential. In terms of the design thinking approach, this will cover the whole scope from problem to solution. Even if each part will be cover quickly.",
              botImage: require("../../assets/images/projects/legid/timeline.svg"),
@@ -268,6 +270,7 @@
           research: {
              title: "RESEARCH",
              image: require("../../assets/images/projects/legid/research.jpg"),
+             alt: "Team LegID",
              h1: "Ideation",
              p1: "Friday, 10pm, we start with an empty whiteboard, we have until 1am to fill it and come up with a solution. We start our ideation workshop with a Crazy 8, an exercise where each member has 8 minutes to find 8 ideas. This allows us to build quantity over quality. However it helps everyone speaks freely and may helps create connections between ideas. At the end of the exercise the whiteboard is filled and we must organise our ideas. When we leave the place at 1am, 3 ideas are left on the board, we should have selected our problem by that time.",
              h2: "Brainstormig",
@@ -277,6 +280,7 @@
           interview: {
              title: "INTERVIEWS",
              image: require("../../assets/images/projects/legid/interview.jpg"),
+             alt: "Team Legid interviewing",
              h1: "Notaries & Legal frame",
              p1: "It is already Saturday afternoon, and we have to verify that our problem is real and that bringing a solution to it makes sense. After many researches on the internet, we chose to call notaries to inform us about the legal framework and its limits. We learn that the subject is not covered in France, it is a “grey zone”, but the interest is growing. ",
              h2: "Relatives of deceased persons",
@@ -304,6 +308,7 @@
           solution: {
              title: "SOLUTION / PROBLEM FIT",
              image: require("../../assets/images/projects/legid/solution.jpg"),
+             alt: "Team LegID brainstorming",
              h1: "MVP Approach",
              p1: "In the second part of the afternoon, following our exchanges we have to imagine our solution to allow the 'transmission of our digital heritage'. At first, thanks to a new brainstorming we evoke the possibility of a platform of sharing passwords with the wishes of the deceased person. We could thus choose to delete our Facebook account but keep our Instagram photos. In view of the security constraints that this poses we chose to focus on the core of our topic. We therefore first thought about a solution to allow families to easily request the deletion of their loved ones' accounts.",
              h2: "Test and learn",
@@ -317,16 +322,19 @@
                    subtitle: "Value Proposition",
                    description: "LegID is based on a B2B2C model. Our goal is to offer our service to the families of the deceased through the intermediary of funeral directors, who thus complete their service offers. Our offer is thus sold in a package by the undertakers. We are thus put in direct contact with the families who need it. In return, the undertaker receives a commission.",
                    image: require("../../assets/images/projects/legid/flow.svg"),
+                   alt: "value proposition scheme",
                 },
                 {
                    subtitle: "Product viability",
                    description: "Every year, more than 600 000 people die in France. To give us an idea of the potential stagnant data that this represents, we focused on email addresses (necessary to open any other account). It is thus not less than 400 000 e-mail address holders who die each year in France. According to the interviews we have been able to conduct, we estimate that we could help 130,000 people. In terms of market this represents a potential of 6.5M € each year.",
                    image: require("../../assets/images/projects/legid/viability.svg"),
+                   alt:"Product viability scheme",
                 },
                 {
                    subtitle: "Landing Page",
                    description: "First of all, in order to sensitize the families but also the undertakers about the data life cycle, I chose to design a landing page. The biggest difficulty here was to find an adequate message. Death being a sensitive subject, I had to find the right tone. As we are also dealing with environmental and technological issues, I took the liberty to use brighter colors and some illustrations. It is necessary to remember that this subject must be understood early, it is thus necessary to include the youngest in its comprehension, that can pass by the aesthetics of our page which I wanted pleasant.",
                    image: require("../../assets/images/projects/legid/cover.png"),
+                   alt: "Landing page mockup",
                 },
              ]
           },
@@ -334,11 +342,13 @@
           prototype: {
              title: "Presentation Deck",
              image: require("../../assets/images/projects/legid/slides.gif"),
+             alt:"Pitch presentation support",
           },
  
           pitch: {
              title: "PITCH",
              image: require("../../assets/images/projects/legid/pitch.jpg"),
+             alt: "Tanguy DELEAGE pitching LegID",
              h1: "5min to convince 5 person",
              p1: "Being the initiator of LegID, I pitched the project alone in front of a jury of 5 people, entrepreneurs, but also directors of incubators. During this 5-minute pitch, I had to present all the steps of our project, from the research of the problem, to our financial projections and our milestones.",
           },
@@ -346,6 +356,7 @@
           conclusion: {
              title: "CONCLUSION",
              image: require("../../assets/images/projects/legid/conclusion.jpg"),
+             alt: "Team LegID Carrying their trophies",
              p1: "The jury selected us as the winner, so we won a nice trophy but also the possibility to be incubated in the Centrale-Audencia incubator. After working long hours on a project like this one, we realized how important it is to build a team in a project. In our case, we are all students at different ages and working on a project for a weekend together is quite different from working on it for years. So we preferred to decline the offer so that everyone could work on other projects.",
           },
 
@@ -354,6 +365,7 @@
             subtitle: "Redesign the website of a German mobile coffee shop",
             link: "/mokaba",
             image: require('../../assets/images/projects/mokaba/cover.png'),
+            alt: "Mokaba mockup",
          },
        }
    },

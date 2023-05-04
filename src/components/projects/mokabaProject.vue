@@ -9,7 +9,7 @@
           <div class="right-card background">
              <div class="right-card-info">
                 <div class="header-project">
-                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="Arrow back">
+                   <img src="../../assets/icons/back-arrow.svg" class="pointer arrow-back-small" loading="lazy" @click="$router.go(-1)" alt="Icon back arrow">
                    <h1>{{ project.title }}</h1>
                    <div class="header-filler"></div>
                 </div>
