@@ -37,6 +37,7 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         component: HomeSection,
+        redirect: "/"
     }
 ]
 
