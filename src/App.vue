@@ -159,5 +159,19 @@ img {
     cursor: pointer;
 }
 }
+
+
+
+/* ========================== Scrollbar ==================== */
+::-webkit-scrollbar {
+  width: .8rem;
+  background-color: var(--black50);
+  /* border-radius: .5rem; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black30);
+  border-radius: .5rem;
+}
   
 </style>
