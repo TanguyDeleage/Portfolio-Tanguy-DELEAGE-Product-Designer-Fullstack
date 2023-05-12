@@ -277,7 +277,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../assets/images/background.jpg);
+       background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../assets/images/background.webp);
        padding: 2.5rem
     }
     .right-card{
@@ -416,7 +416,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../assets/images/background.jpg);
+       background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../assets/images/background.webp);
        padding: 2.5rem
     }
     .right-card{

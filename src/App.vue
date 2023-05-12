@@ -77,7 +77,7 @@ img {
   }
 
   .background {
-    background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.jpg);
+    background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url(../src/assets/images/background.webp);
   }
 
   /* =============== Hover ================ */

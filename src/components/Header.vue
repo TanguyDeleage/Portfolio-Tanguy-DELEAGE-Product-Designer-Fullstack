@@ -11,11 +11,11 @@
         </router-link>
 
         <nav class="navbar">
-          <ul @click="openMenu()" class="nav-links">
+          <div @click="openMenu()" class="nav-links">
             <router-link class="nav-link" to="/">Home</router-link>
             <router-link class="nav-link" to="/about">About</router-link>
             <router-link class="nav-link" to="/contact">Contact</router-link>
-          </ul>
+          </div>
         </nav>
 
         <div @click="openMenu()" class="burger">
@@ -75,10 +75,10 @@ export default {
     gap: 5rem;
   }
 
-  .nav-links li a{
+  /* .nav-links li a{
     color: var(--black100);
     font-size: var(--font-h2);
-  }
+  } */
 
   .header {
     display: flex;

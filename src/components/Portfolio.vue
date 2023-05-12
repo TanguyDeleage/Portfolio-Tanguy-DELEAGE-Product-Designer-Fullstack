@@ -349,7 +349,7 @@ export default {
 }
 
 .background:nth-child(even) {
-    background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../src/assets/images/background.jpg)
+    background: linear-gradient( rgba(214, 206, 199, 0.4), rgba(214, 206, 199, 0.4) ), url(../../src/assets/images/background.webp)
 }
 
 
