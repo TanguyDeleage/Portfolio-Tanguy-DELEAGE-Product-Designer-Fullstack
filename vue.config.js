@@ -26,6 +26,24 @@ const paths = [
     lastmod: '2023-05-12',
     priority: 0.9,
     changefreq: 'yearly'
+  },
+  {
+    path: '/matematch/',
+    lastmod: '2023-05-12',
+    priority: 0.8,
+    changefreq: 'yearly'
+  },
+  {
+    path: '/legid/',
+    lastmod: '2023-05-12',
+    priority: 0.8,
+    changefreq: 'yearly'
+  },
+  {
+    path: '/mokaba/',
+    lastmod: '2023-05-12',
+    priority: 0.8,
+    changefreq: 'yearly'
   }
 ]
 
