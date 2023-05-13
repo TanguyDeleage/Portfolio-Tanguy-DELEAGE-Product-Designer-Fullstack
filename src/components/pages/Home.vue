@@ -67,7 +67,7 @@
 
 <style scoped>
 /* =============== Big devices ================ */
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 982px) {
   .hero {
     height: calc(100vh - 5rem);
   }
@@ -91,7 +91,7 @@
   }
 }
 /* =============== Small devices ================ */
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 982px) {
   .home {
     display: flex;
     flex-direction: column;

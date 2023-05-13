@@ -163,16 +163,13 @@ export default {
             });
         },
     },
-    // beforeUpdate() {
-    //     this.displayProject()
-    // },
 }
 </script>
    
 
 <style scoped>
 /* =============== Small devices ================ */
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 982px) {
     .project-card{
         display: flex;
         flex-direction: row;
@@ -228,7 +225,7 @@ export default {
     }
 }
 /* =============== Big devices ================ */
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 982px) {
     .project-card{
         display: flex;
         flex-direction: row;
