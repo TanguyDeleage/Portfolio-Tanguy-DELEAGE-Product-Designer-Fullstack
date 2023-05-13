@@ -317,7 +317,7 @@ export default {
             title: "PITCH",
             // image: require("https://www.youtube.com/embed/1AYKmFTObQQ?start=2435"),
             h1: "5 minutes to convince 80 persons",
-            p1: "This is the bootcamp’s last day, the “demoday”. Every group must pitch his project in 5 minutes and presents how it works, every feature. The real difficulty here is to stay focus on this pitch and the public while navigating on the app that may not work exactly like planned. We must adapt. Gladly for us, everything went well",
+            p1: "This is the bootcamp’s last day, the “demoday”. Every group had to pitch their project in 5 minutes and presents how it works, every feature. The real difficulty here is to stay focused on this pitch and the public while navigating on the app that may not work exactly like planned. We must adapt. Gladly for us, everything went well.",
          },
 
          conclusion: {
