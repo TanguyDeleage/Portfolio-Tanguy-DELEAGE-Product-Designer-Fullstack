@@ -146,7 +146,6 @@ export default {
             const slider =  document.querySelector('.projects-slider');
             const card = document.querySelector('.project-card');
             
-            // this.activeProject = slider.scrollLeft / card.offsetWidth;
             var activeProject = slider.scrollLeft / card.offsetWidth;
 
             // Nav adjust to current project
@@ -155,7 +154,7 @@ export default {
             numbers.forEach((number, index) => {
                 number.classList.remove('inactive-project')
                 number.classList.remove('active-project')
-                if (index === activeProject) {
+                if (index === Math.round(activeProject) ){
                     number.classList.add('active-project')
                 }
                 else {
@@ -329,11 +328,6 @@ export default {
     color: var(--black80);
     font-weight: var(--medium);
 }
-/* 
-.project-subtitle {
-    font-size: 1.5rem;
-} */
-
 .project-image {
     display: flex;
     align-items: center;
