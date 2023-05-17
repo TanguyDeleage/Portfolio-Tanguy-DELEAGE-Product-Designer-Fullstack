@@ -18,7 +18,7 @@
         </div>
 
         <div class="hero-picture">
-          <img src="../../assets/images/hero-picture.jpeg" alt="Tanguy DELEAGE">
+          <img src="../../assets/images/hero-picture.jpeg" alt="Tanguy DELEAGE" width="1080" height="1149">
         </div>
     </section>
 
