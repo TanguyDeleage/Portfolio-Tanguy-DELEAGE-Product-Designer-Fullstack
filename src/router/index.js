@@ -39,11 +39,6 @@ const routes = [
         component: HomeSection,
         redirect: "/"
     },
-    {
-        path: "*",
-        component: HomeSection,
-        redirect: "/"
-    },
 ]
 
 const router = createRouter ({
