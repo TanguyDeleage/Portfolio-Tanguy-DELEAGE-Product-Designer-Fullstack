@@ -161,7 +161,7 @@
           project: {
              image: require("../../assets/images/projects/mokaba/cover.png"),
              title: "MOKABA",
-             category: "Design & Development",
+             category: "Research, UI, UX",
              context: "Mokaba is a mobile café in Mosbach, Germany. They have had a website for several years which they use very little.",
              role: "On this project, I conducted interviews, framed problems, created a UI Kit, presented and justified my designs.",
              tools: "Figma",

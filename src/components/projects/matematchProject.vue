@@ -211,7 +211,7 @@ export default {
          project: {
             image: require("../../assets/images/projects/matematch/cover.png"),
             title: "MATEMATCH",
-            category: "Design & Development",
+            category: "UI, UX, Development",
             context: "During my bootcamp at Le Wagon (leader in tech bootcamps), in a group of 3 we had 10 days to design and build an app.",
             role: "On this project I worked on the problem statement and the problem discovery. I worked alone on the product design. Then I worked mainly on front end developmentwith a bit of back.",
             tools: "Figma, Notion, Github, Slack",

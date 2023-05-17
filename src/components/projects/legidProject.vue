@@ -241,7 +241,7 @@
           project: {
             image: require("../../assets/images/projects/legid/cover.png"),
              title: "LEGID",
-             category: "Ideation & Design",
+             category: "Ideation, UI, UX",
              context: "During a startup weekend (creating a startup in 48h), in a group of 5 people we had 48 hours to find a problematic, test it with real users, evaluate the business viability, build a roadmap and pitch the project in front of a jury.",
              role: "I had the chance to pitch the LegID project in front of the jury. My role on this project was to propose the problematic we then choose to solve. I worked on the ideation of the solution and the user research. Then I worked alone on the landing page design.",
              tools: "Figma, Google Drive, Powerpoint",
