@@ -487,7 +487,7 @@ export default {
 /* =============== Big devices ================ */
 @media screen and (min-width: 930px) {
    .hero-project{
-      height: calc(100vh - 5rem);
+      height: calc(100vh - 8rem);
       display: flex;
       flex-direction: row;
       text-align: left;
