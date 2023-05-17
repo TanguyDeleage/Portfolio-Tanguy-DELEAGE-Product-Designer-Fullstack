@@ -723,7 +723,11 @@ export default {
       transform: rotate(90deg);
       background-color: var(--black30);
       border-radius: 200rem;
-      padding: 1rem;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 
    .up-arrow:hover {
