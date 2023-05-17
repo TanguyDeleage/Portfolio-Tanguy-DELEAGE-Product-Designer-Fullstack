@@ -38,13 +38,17 @@ const routes = [
         path: '/:pathMatch(.*)*',
         component: HomeSection,
         redirect: "/"
-    }
+    },
+    {
+        path: "*",
+        component: HomeSection,
+        redirect: "/"
+    },
 ]
 
 const router = createRouter ({
-    // history: createWebHistory(process.env.BASE_URL),
-    // mode: "history",
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
+    mode: "history",
     routes,
     scrollBehavior() {
         window.scrollTo(0, 0)
