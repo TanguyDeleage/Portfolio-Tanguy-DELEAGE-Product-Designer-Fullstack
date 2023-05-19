@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeSection from '../components/pages/Home.vue'
-import AboutSection from '../components/pages/About.vue'
-import ContactSection from '../components/pages/Contact.vue'
+import HomeSection from '../components/pages/Home.vue';
+import AboutSection from '../components/pages/About.vue';
+import ContactSection from '../components/pages/Contact.vue';
 
-import matematchProject from '../components/projects/matematchProject.vue'
-import legidProject from '../components/projects/legidProject.vue'
-import mokabaProject from '../components/projects/mokabaProject.vue'
+import matematchProject from '../components/projects/matematchProject.vue';
+import legidProject from '../components/projects/legidProject.vue';
+import mokabaProject from '../components/projects/mokabaProject.vue';
+
+import NotFound from '../components/NotFound.vue';
 
 
 const routes = [
@@ -36,14 +38,13 @@ const routes = [
     },
     {
         path: '/:pathMatch(.*)*',
-        component: HomeSection,
-        redirect: '/',
+        component: NotFound,
+        // redirect: '/',
     },
 ]
 
 const router = createRouter ({
-    // history: createWebHistory(process.env.BASE_URL),
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
     mode: "history",
     routes,
     scrollBehavior() {
