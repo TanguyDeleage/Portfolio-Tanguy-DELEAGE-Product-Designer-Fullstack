@@ -297,7 +297,7 @@ export default {
 
          prototype: {
             title: "PROTOTYPE",
-            image: require("../../assets/images/projects/matematch/flow1.png"),
+            image: require("../../assets/images/projects/matematch/flow1.gif"),
             alt1: "Matematch sign in mockup",
             image1: require("../../assets/images/projects/matematch/flow2.png"),
             alt2: "Matematch finding a guide mockup",
