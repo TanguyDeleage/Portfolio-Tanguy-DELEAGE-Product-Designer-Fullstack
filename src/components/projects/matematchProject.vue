@@ -38,7 +38,7 @@
             </div>
 
             <div class="cta">
-               <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?node-id=2-252&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A252&hide-ui=1" class="btn-primary" target="_blank">Try prototype</a>
+               <a href="https://www.figma.com/proto/nz1BI2XULa2F0bJYd3TDAA/Proto?type=design&node-id=108-1569&scaling=scale-down&page-id=0%3A1&starting-point-node-id=108%3A1569&hotspot-hints=0&hide-ui=1" class="btn-primary" target="_blank">Try prototype</a>
                <a href="https://youtu.be/1AYKmFTObQQ?t=2439" class="btn-tertiary" target="_blank">Product pitch</a>
             </div>
             
