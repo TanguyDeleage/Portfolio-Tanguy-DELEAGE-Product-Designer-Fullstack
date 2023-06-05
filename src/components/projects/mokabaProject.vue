@@ -133,16 +133,16 @@
                 <img src="../../assets/icons/back-arrow.svg" :alt="rebond.alt" loading="lazy">
              </div>
              <div class="rebond-right">
-                <div class="rebond-picture">
+                <!-- <div class="rebond-picture">
                    <img :src="rebond.image" alt="" loading="lazy">
-                </div>
+                </div> -->
                 <div class="rebond-data">
                    <div class="rebond-title">
                       <h3>{{ rebond.title }}</h3>
                       <p>{{rebond.subtitle}}</p>
                    </div>
                    <!-- <a :href="rebond.link" class="btn-primary">Discover next project</a> -->
-                   <router-link class="btn-primary" :to="rebond.link">Discover next project</router-link>
+                   <router-link class="btn-primary" :to="rebond.link">Go to about page</router-link>
                 </div>
              </div>
           </div>
@@ -244,9 +244,9 @@
           },
  
           rebond: {
-             title: "Matematch",
-             subtitle: "10 days to help foreign students live a deeper exchange experience",
-             link: "/matematch",
+             title: "Get to know me",
+             subtitle: "Curious about my designer / developper journey ?",
+             link: "/about",
              image: require('../../assets/images/projects/matematch/cover.png'),
              alt: "Matematch mockup"
           },
