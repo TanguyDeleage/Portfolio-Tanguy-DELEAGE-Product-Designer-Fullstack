@@ -13,7 +13,7 @@
             </div>
             <div class="contact-footer">
                 <span class="signature"> <img src="../../assets/logo.svg" width="24" height="27" alt="Logo Tanguy DELEAGE"> <p>Tanguy Deléage</p> </span>
-                <p class="contact-description">Feel free to share your thoughts and questions. I’m always open to exchange about new projects.</p>
+                <p class="contact-description">Feel free to share your thoughts and questions. I’m always happy to exchange about new projects.</p>
             </div>
         </div>
 
