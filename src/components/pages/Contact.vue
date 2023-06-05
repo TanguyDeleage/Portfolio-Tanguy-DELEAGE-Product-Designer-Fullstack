@@ -7,7 +7,7 @@
                     <span class="social-title">{{ contact.title }}</span>
                     <div class="social-link"> 
                         <img class="social-icon" :src="require('../../assets/icons/' +  contact.icon)" :alt="'Logo ' + contact.title">
-                        <a :href="contact.link" class="btn-tertiary"> {{ contact.label }} </a>
+                        <a :href="contact.link" class="btn-tertiary" target="_blank"> {{ contact.label }} </a>
                     </div>
                 </div>
             </div>
@@ -50,12 +50,12 @@ export default {
                 label: "tanguy-deleage",
                 link: "https://www.linkedin.com/in/tanguy-deleage/"
                 },
-                // {
-                // title: "Dribble",
-                // icon: 'mail.svg',
-                // label: "TanguyDELEAGE",
-                // link: ""
-                // }
+                {
+                title: "Github",
+                icon: 'github.svg',
+                label: "TanguyDELEAGE",
+                link: "https://github.com/TanguyDeleage"
+                }
             ],
             inputs: [
                 {
